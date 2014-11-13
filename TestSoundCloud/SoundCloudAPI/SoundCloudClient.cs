@@ -16,34 +16,14 @@ namespace TestSoundCloud
 
         private WebClient client;
 
-        private Search<Track> trackSearch;
-        private Search<User> userSearch;
+        public Search<Track> trackSearch;
+        public Search<User> userSearch;
 
         public SoundCloudClient()
         {
             client = new WebClient();
             trackSearch = new Search<Track>(client, ClientId, "tracks");
             userSearch = new Search<User>(client, ClientId, "users");
-        }
-
-        public List<Track> SearchTrack(string q, int limit = 15, int offset = 0)
-        {
-            return (trackSearch.SearchQuery(q, limit, offset));
-        }
-
-        public List<User> SearchUser(string q, int limit = 15, int offset = 0)
-        {
-            return (userSearch.SearchQuery(q, limit, offset));
-        }
-
-        public List<Track> NextPage()
-        {
-            return (trackSearch.NextPage());
-        }
-
-        public List<Track> PrevPage()
-        {
-            return (trackSearch.PrevPage());
         }
     }
 }

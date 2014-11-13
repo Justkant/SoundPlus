@@ -34,11 +34,12 @@ namespace TestSoundCloud
         private void buttonSearch_Click(object sender, RoutedEventArgs e)
         {
             listBoxResult.Items.Clear();
-            List<Track> tracks = client.SearchTrack(textBoxSearch.Text);
+            List<Track> tracks = client.trackSearch.SearchQuery(textBoxSearch.Text);
 
             foreach (Track track in tracks)
                 listBoxResult.Items.Add(new UserControlTrack(track, listBoxDownload));
         }
+
         private void listBoxResult_MouseUp(object sender, MouseButtonEventArgs e)
         {
             ListBox listBoxSender = (ListBox)sender;
