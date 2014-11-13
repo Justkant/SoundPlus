@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\Guillaume\documents\visual studio 2010\Projects\TestSoundCloud\TestSoundCloud\obj\x86\Debug\
+C:\Users\Guillaume\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Debug\
 TestSoundCloud
 none
 false
 DEBUG;TRACE
-C:\Users\Guillaume\documents\visual studio 2010\Projects\TestSoundCloud\TestSoundCloud\App.xaml
+C:\Users\Guillaume\Documents\GitHub\SoundPlus\TestSoundCloud\App.xaml
 41846599124
 
 131571592233
-13-1020947342
+13-501890132
 MainWindow.xaml;UserControl\UserControlTrack.xaml;UserControl\UserControlTrackDl.xaml;UserControl\UserControlTrackPreview.xaml;
 
 False

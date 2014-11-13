@@ -27,7 +27,25 @@ namespace TestSoundCloud
         public void update(Track track)
         {
             labelTitle.Content = track.title;
-            
+            labelAuthor.Content = track.user.username;
+
+            if (track.artwork_url != null)
+            {
+                BitmapImage img = new BitmapImage();
+                img.BeginInit();
+                img.UriSource = new Uri(track.artwork_url, UriKind.Absolute);
+                img.EndInit();
+                image.Source = img;
+            }
+
+            if (track.waveform_url != null)
+            {
+                BitmapImage img = new BitmapImage();
+                img.BeginInit();
+                img.UriSource = new Uri(track.waveform_url, UriKind.Absolute);
+                img.EndInit();
+                imageSound.Source = img;
+            }
         }
     }
 }
