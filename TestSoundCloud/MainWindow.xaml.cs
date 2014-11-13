@@ -123,7 +123,7 @@ namespace TestSoundCloud
                 if (listBoxDownload.SelectedItem == null)
                     return;
 
-                updatePreview(((UserControlTrack)listBoxDownload.SelectedItem).Track);
+                updatePreview(((UserControlTrackDl)listBoxDownload.SelectedItem).Track);
             }
         }
     }
