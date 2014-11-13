@@ -1,1 +1,9 @@
 c:\users\kant\documents\visual studio 2013\Projects\SoundPlus\SoundPlus\bin\Debug\SoundPlus.exe.config
+c:\users\kant\documents\visual studio 2013\Projects\SoundPlus\SoundPlus\bin\Debug\SoundPlus.exe
+c:\users\kant\documents\visual studio 2013\Projects\SoundPlus\SoundPlus\bin\Debug\SoundPlus.pdb
+c:\users\kant\documents\visual studio 2013\Projects\SoundPlus\SoundPlus\bin\Debug\Newtonsoft.Json.dll
+c:\users\kant\documents\visual studio 2013\Projects\SoundPlus\SoundPlus\bin\Debug\Newtonsoft.Json.pdb
+c:\users\kant\documents\visual studio 2013\Projects\SoundPlus\SoundPlus\bin\Debug\Newtonsoft.Json.xml
+c:\users\kant\documents\visual studio 2013\Projects\SoundPlus\SoundPlus\obj\Debug\SoundPlus.csprojResolveAssemblyReference.cache
+c:\users\kant\documents\visual studio 2013\Projects\SoundPlus\SoundPlus\obj\Debug\SoundPlus.exe
+c:\users\kant\documents\visual studio 2013\Projects\SoundPlus\SoundPlus\obj\Debug\SoundPlus.pdb

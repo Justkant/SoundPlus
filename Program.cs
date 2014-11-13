@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace Sound__test
+namespace SoundPlus
 {
     class Program
     {
@@ -21,17 +21,13 @@ namespace Sound__test
             //Client secret id from SoundCloud
             //string ClientSecret = "b8230bb9c62077357b05bb54440fae52";
 
-            string url = "https://soundcloud.com/dillonfrancis/dillon-francis-dj-snake-get";
-            string resolveStr = "https://api.soundcloud.com/resolve.json?client_id=" + ClientId + "&url=" + url;
-            string res = client.DownloadString("https://api.soundcloud.com/tracks.json?client_id=" + ClientId + "&q=savant");
-            List<Tracks> tracks = JsonConvert.DeserializeObject<List<Tracks>>(res);
-            foreach (Tracks track in tracks)
+            string res = client.DownloadString("https://api.soundcloud.com/tracks.json?client_id=" + ClientId + "&q=savant&limit=10&offset=10");
+            List<Track> tracks = JsonConvert.DeserializeObject<List<Track>>(res);
+            foreach (Track track in tracks)
             {
-                Console.WriteLine(track.stream_url);
-                Console.WriteLine(track.title);
+                Console.WriteLine(track.user.username);
+                Console.WriteLine(track.title + "\n");
             }
-            //Print the Data
-            //Console.WriteLine(buff);
             Console.ReadKey(true);
         }
     }
