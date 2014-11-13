@@ -4,6 +4,7 @@
         Title="SoundPlus" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" Height="582" Width="1200" xmlns:my="clr-namespace:TestSoundCloud">
     <Grid>
         <Grid Height="33" Name="stackPanel1" VerticalAlignment="Top" Background="#FFD1D1D1">
+            
             <Button Content="O" Height="23" Margin="201,6,0,0" Name="buttonSearch" VerticalAlignment="Top" Click="buttonSearch_Click" HorizontalAlignment="Left" Width="24" />
             <TextBox Height="23" Margin="6,6,0,0" Name="textBoxSearch" VerticalAlignment="Top" HorizontalAlignment="Left" Width="192" KeyDown="textBoxSearch_KeyDown" />
         </Grid>

@@ -58,10 +58,12 @@ namespace TestSoundCloud
                 Button button = new Button();
                 button.Content = "#" + tag;
                 button.BorderThickness = new Thickness(0);
-                button.Padding = new Thickness(5, 0, 5, 0);
-                button.Margin = new Thickness(0, 5, 15, 5);
+                button.Padding = new Thickness(5, 2, 5, 2);
+                button.Margin = new Thickness(0, 3, 10, 3);
                 stackPanelTags.Children.Add(button);
             }
+
+            textBlockDescription.Text = track.description;
         }
     }
 }
