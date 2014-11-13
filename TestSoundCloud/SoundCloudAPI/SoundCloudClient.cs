@@ -25,7 +25,7 @@ namespace TestSoundCloud
             client = new WebClient();
             trackSearch = new Search<Track>(client, ClientId, "tracks");
             userSearch = new Search<User>(client, ClientId, "users");
-            playListSearch = new Search<PlayList>(client, ClientId, "playLists");
+            playListSearch = new Search<PlayList>(client, ClientId, "playlists");
         }
     }
 }

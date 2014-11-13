@@ -31,8 +31,8 @@ namespace TestSoundCloud
         public int? release_day { get; set; }
         public int? release_month { get; set; }
         public int? release_year { get; set; }
-        public bool streamable { get; set; }
-        public bool downloadable { get; set; }
+        public bool? streamable { get; set; }
+        public bool? downloadable { get; set; }
         public string state { get; set; }
         public string license { get; set; }
         public string track_type { get; set; }
