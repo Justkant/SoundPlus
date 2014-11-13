@@ -83,3 +83,5 @@ C:\Users\kant\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Debug\MainWindow
 C:\Users\kant\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Debug\TestSoundCloud.g.resources
 C:\Users\kant\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Debug\TestSoundCloud.Properties.Resources.resources
 C:\Users\kant\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Debug\TestSoundCloud.csproj.GenerateResource.Cache
+C:\Users\Guillaume\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Debug\UserControl\UserControlUser.baml
+C:\Users\Guillaume\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Debug\UserControl\UserControlUser.g.cs
