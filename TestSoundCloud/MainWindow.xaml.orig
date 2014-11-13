@@ -11,6 +11,10 @@
             </ControlTemplate>
         </Grid.Resources>
 
+<<<<<<< HEAD
+=======
+        <Grid Height="33" Name="stackPanel1" VerticalAlignment="Top" Background="#FFD1D1D1">
+>>>>>>> d60129be9e25636ad5f608838b80a0162c7f33dd
             <StackPanel Orientation="Horizontal">
                 <TextBox Height="23" Margin="6,6,0,0" Name="textBoxSearch" VerticalAlignment="Top" HorizontalAlignment="Left" Width="212" KeyDown="textBoxSearch_KeyDown" />
                 <RadioButton Content="Tracks" Height="16" Name="radioButtonTracks" Padding="0" Margin="5,0" />
@@ -18,7 +22,11 @@
                 <RadioButton Content="Users" Height="16" Name="radioButtonUsers" Padding="0" Margin="5,0" />
             </StackPanel>
         </Grid>
+<<<<<<< HEAD
         <Grid Margin="0,33,0,31" Name="stackPanel2" Background="#FF252525">
+=======
+        <Grid Margin="0,33,0,31" Name="stackPanel2" Background="#FFEDEDED" SizeChanged="stackPanel2_SizeChanged">
+>>>>>>> d60129be9e25636ad5f608838b80a0162c7f33dd
             
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="2*"></ColumnDefinition>
@@ -27,11 +35,19 @@
                 <ColumnDefinition Width="3"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
+<<<<<<< HEAD
             <ListBox Grid.Column="0" Height="Auto" HorizontalAlignment="Stretch" Name="listBoxResult" VerticalAlignment="Top" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Stretch" MouseUp="listBoxResult_MouseUp" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" ScrollViewer.VerticalScrollBarVisibility="Hidden" />
             <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Stretch" DragOver="GridSplitter_DragOver" Background="#FF252525"></GridSplitter>
             <my:UserControlTrackPreview Grid.Column="2" HorizontalAlignment="Stretch" Grid.ColumnSpan="2" x:Name="trackPreview" Width="Auto" Height="Auto" Margin="0"/>
             <GridSplitter Grid.Column="3" Width="5" HorizontalAlignment="Stretch" Background="#FF252525"></GridSplitter>
             <ListBox Grid.Column="4" HorizontalAlignment="Stretch" Name="listBoxDownload" HorizontalContentAlignment="Stretch" MouseUp="listBoxResult_MouseUp" Background="{x:Null}" BorderBrush="#00000000" Margin="0,0,0,-7" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Hidden" />
+=======
+            <ListBox Grid.Column="0" Height="Auto" HorizontalAlignment="Stretch" Name="listBoxResult" VerticalAlignment="Top" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Stretch" MouseUp="listBoxResult_MouseUp" />
+            <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Stretch"></GridSplitter>
+            <my:UserControlTrackPreview Grid.Column="2" HorizontalAlignment="Stretch" Grid.ColumnSpan="2" x:Name="trackPreview" Width="Auto" VerticalAlignment="Top" Height="479"></my:UserControlTrackPreview>
+            <GridSplitter Grid.Column="3" Width="5" HorizontalAlignment="Stretch"></GridSplitter>
+            <ListBox Grid.Column="4" Height="Auto" HorizontalAlignment="Stretch" Name="listBoxDownload" VerticalAlignment="Top" HorizontalContentAlignment="Stretch" MouseUp="listBoxResult_MouseUp" />
+>>>>>>> d60129be9e25636ad5f608838b80a0162c7f33dd
 
         </Grid>
         <Grid Name="stackPanel3" Background="#FF252525" Height="33" VerticalAlignment="Bottom"></Grid>

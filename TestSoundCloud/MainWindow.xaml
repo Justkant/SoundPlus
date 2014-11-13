@@ -17,6 +17,7 @@
                 <RadioButton Content="Playlists" Height="16" Name="radioButtonPlaylists" Padding="0" Margin="5,0" />
                 <RadioButton Content="Users" Height="16" Name="radioButtonUsers" Padding="0" Margin="5,0" />
             </StackPanel>
+            </StackPanel>
         </Grid>
         <Grid Margin="0,33,0,31" Name="stackPanel2" Background="#FF252525">
             

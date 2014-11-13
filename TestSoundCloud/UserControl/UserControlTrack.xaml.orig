@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+<<<<<<< HEAD
              mc:Ignorable="d" d:DesignHeight="69" Height="69">
     <Grid Background="#FF1B1B1B">
         <Image Name="image" Stretch="Fill" Width="47" Height="47" Margin="8,0,0,0" HorizontalAlignment="Left" />
@@ -10,5 +11,14 @@
         <TextBox HorizontalAlignment="Left" Margin="60,25,0,0" Name="labelTitle" Width="Auto" Text="Title - Ma Bite sur ton Front" Background="{x:Null}" DockPanel.Dock="Top" ScrollViewer.VerticalScrollBarVisibility="Disabled" Padding="0" TextWrapping="Wrap" IsReadOnly="True" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" SelectionOpacity="0" Cursor="Arrow" AllowDrop="False" Focusable="False" IsHitTestVisible="False" IsTabStop="False" Foreground="White"/>
         <Label Content="5:32" FontSize="11" HorizontalAlignment="Right" Name="labelDuration" VerticalAlignment="Top" Margin="0,10,10,0" DockPanel.Dock="Top" Padding="0" Foreground="White"/>
         <Button Content="DL" Name="buttonDownload" AllowDrop="False" BorderBrush="{x:Null}" HorizontalAlignment="Right" Height="19" VerticalAlignment="Bottom" Margin="8,0,8,4" Click="buttonDownload_Click" DockPanel.Dock="Right" Padding="1" Width="45" Background="#FF494949" Foreground="#FF0F0F0F" />
+=======
+             mc:Ignorable="d" d:DesignHeight="64" d:DesignWidth="181">
+    <Grid>
+        <Label Content="author" HorizontalAlignment="Left" Name="labelAuthor" FontSize="11" Margin="49,-2,0,0" Height="28" VerticalAlignment="Top" />
+        <Label Content="5:32" FontSize="11" Height="28" HorizontalAlignment="Right" Name="labelDuration" VerticalAlignment="Top" Margin="0,-2,0,0"></Label>
+        <Button Content="DL" Name="buttonDownload" AllowDrop="False" BorderBrush="{x:Null}" HorizontalAlignment="Right" Width="47" Height="19" VerticalAlignment="Bottom" Margin="0,0,0,3" Click="buttonDownload_Click" />
+        <Image HorizontalAlignment="Left" Name="image" Stretch="Fill" Width="47" Height="47" VerticalAlignment="Center" />
+        <TextBox Height="41" HorizontalAlignment="Left" Margin="55,20,0,0" Name="labelTitle" VerticalAlignment="Top" Width="Auto" Text="Title - Ma Bite sur ton Front" IsReadOnly="True" Background="{x:Null}" BorderBrush="{x:Null}" TextWrapping="Wrap" HorizontalScrollBarVisibility="Auto" MaxLines="2" />
+>>>>>>> d60129be9e25636ad5f608838b80a0162c7f33dd
     </Grid>
 </UserControl>
