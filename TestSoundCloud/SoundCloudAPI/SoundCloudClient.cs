@@ -18,12 +18,14 @@ namespace TestSoundCloud
 
         public Search<Track> trackSearch;
         public Search<User> userSearch;
+        public Search<PlayList> playListSearch;
 
         public SoundCloudClient()
         {
             client = new WebClient();
             trackSearch = new Search<Track>(client, ClientId, "tracks");
             userSearch = new Search<User>(client, ClientId, "users");
+            playListSearch = new Search<PlayList>(client, ClientId, "playLists");
         }
     }
 }

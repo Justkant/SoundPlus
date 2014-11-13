@@ -19,13 +19,14 @@ namespace TestSoundCloud
     /// </summary>
     public partial class UserControlTrackPreview : UserControl
     {
-        public UserControlTrackPreview()
+        public Window parent;
+
+        public UserControlTrackPreview(Track track, Window parent)
         {
             InitializeComponent();
-        }
 
-        public void update(Track track)
-        {
+            this.parent = parent;
+
             stackPanelTags.Children.Clear();
 
             labelTitle.Content = track.title;
@@ -64,6 +65,11 @@ namespace TestSoundCloud
             }
 
             textBlockDescription.Text = track.description;
+        }
+
+        private void labelAuthor_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }

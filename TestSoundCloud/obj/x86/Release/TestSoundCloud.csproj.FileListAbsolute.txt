@@ -42,3 +42,9 @@ C:\Users\Guillaume\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Release\Tes
 C:\Users\Guillaume\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Release\TestSoundCloud_MarkupCompile.lref
 C:\Users\Guillaume\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Release\TestSoundCloud.exe
 C:\Users\Guillaume\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Release\TestSoundCloud.pdb
+C:\Users\Guillaume\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Release\UserControlUserPreview.baml
+C:\Users\Guillaume\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Release\UserControl\UserControlPlayListPreview.baml
+C:\Users\Guillaume\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Release\UserControl\UserControlUser.baml
+C:\Users\Guillaume\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Release\UserControlUserPreview.g.cs
+C:\Users\Guillaume\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Release\UserControl\UserControlPlayListPreview.g.cs
+C:\Users\Guillaume\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Release\UserControl\UserControlUser.g.cs

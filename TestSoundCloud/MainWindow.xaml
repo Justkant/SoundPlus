@@ -19,7 +19,7 @@
                 <RadioButton Content="Users" Height="16" Name="radioButtonUsers" Padding="0" Margin="5,0" />
             </StackPanel>
         </Grid>
-        <Grid Margin="0,33,0,31" Name="stackPanel2" Background="#FFEDEDED" SizeChanged="stackPanel2_SizeChanged">
+        <Grid Margin="0,33,0,31" Name="stackPanel2" Background="#FFEDEDED">
             
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="2*"></ColumnDefinition>
@@ -30,7 +30,6 @@
             </Grid.ColumnDefinitions>
             <ListBox Grid.Column="0" Height="Auto" HorizontalAlignment="Stretch" Name="listBoxResult" VerticalAlignment="Top" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Stretch" MouseUp="listBoxResult_MouseUp" />
             <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Stretch"></GridSplitter>
-            <my:UserControlTrackPreview Grid.Column="2" HorizontalAlignment="Stretch" Grid.ColumnSpan="2" x:Name="trackPreview" Width="Auto" VerticalAlignment="Top" Height="479"></my:UserControlTrackPreview>
             <GridSplitter Grid.Column="3" Width="5" HorizontalAlignment="Stretch"></GridSplitter>
             <ListBox Grid.Column="4" Height="Auto" HorizontalAlignment="Stretch" Name="listBoxDownload" VerticalAlignment="Top" HorizontalContentAlignment="Stretch" MouseUp="listBoxResult_MouseUp" />
 

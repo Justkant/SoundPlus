@@ -19,18 +19,55 @@ namespace TestSoundCloud
     /// </summary>
     public partial class MainWindow : Window
     {
-        int i = 0;
         SoundCloudClient client;
+        UserControlTrackPreview trackPreview;
+        UserControlPlayListPreview playListPreview;
+        UserControlUserPreview userPreview;
 
         public MainWindow()
         {
             InitializeComponent();
 
-            trackPreview.Visibility = System.Windows.Visibility.Hidden;
-
             client = new SoundCloudClient();
             textBoxSearch.Focus();
             radioButtonTracks.IsChecked = true;
+        }
+
+        private void ClearColumn(int column)
+        {
+            for (int i = 0; i < stackPanel2.Children.Count; i++)
+                if (Grid.GetColumn(stackPanel2.Children[i]) == column)
+                    stackPanel2.Children.Remove(stackPanel2.Children[i]);
+        }
+
+        private void updatePreview(Track track)
+        {
+            ClearColumn(2);
+            trackPreview = new UserControlTrackPreview(track, this);
+            trackPreview.Width = Double.NaN;
+            trackPreview.VerticalAlignment = System.Windows.VerticalAlignment.Top;
+            Grid.SetColumn(trackPreview, 2);
+            stackPanel2.Children.Add(trackPreview);
+        }
+
+        private void updatePreview(PlayList playList)
+        {
+            ClearColumn(2);
+            playListPreview = new UserControlPlayListPreview(playList, this);
+            playListPreview.Width = Double.NaN;
+            playListPreview.VerticalAlignment = System.Windows.VerticalAlignment.Top;
+            Grid.SetColumn(playListPreview, 2);
+            stackPanel2.Children.Add(playListPreview);
+        }
+
+        private void updatePreview(User user)
+        {
+            ClearColumn(2);
+            userPreview = new UserControlUserPreview(user, this);
+            userPreview.Width = Double.NaN;
+            userPreview.VerticalAlignment = System.Windows.VerticalAlignment.Top;
+            Grid.SetColumn(userPreview, 2);
+            stackPanel2.Children.Add(userPreview);
         }
 
         private void buttonSearch_Click(object sender, RoutedEventArgs e)
@@ -40,34 +77,6 @@ namespace TestSoundCloud
 
             foreach (Track track in tracks)
                 listBoxResult.Items.Add(new UserControlTrack(track, listBoxDownload));
-        }
-
-        private void listBoxResult_MouseUp(object sender, MouseButtonEventArgs e)
-        {
-            ListBox listBoxSender = (ListBox)sender;
-
-            if (sender == listBoxResult)
-            {
-                if (listBoxResult.SelectedItem == null)
-                {
-                    trackPreview.Visibility = System.Windows.Visibility.Hidden;
-                    return;
-                }
-
-                trackPreview.update(((UserControlTrack)listBoxResult.SelectedItem).Track);
-                trackPreview.Visibility = System.Windows.Visibility.Visible;
-            }
-            else
-            {
-                if (listBoxDownload.SelectedItem == null)
-                {
-                    trackPreview.Visibility = System.Windows.Visibility.Hidden;
-                    return;
-                }
-
-                trackPreview.update(((UserControlTrackDl)listBoxDownload.SelectedItem).Track);
-                trackPreview.Visibility = System.Windows.Visibility.Visible;
-            }
         }
 
         private void textBoxSearch_KeyDown(object sender, KeyEventArgs e)
@@ -86,13 +95,11 @@ namespace TestSoundCloud
             }
             else if (radioButtonPlaylists.IsChecked.Value)
             {
-                /* Uncomment when playlists are implemented
-                List<Playlist> playlists;
-                playlists = client.playlistSearch.SearchQuery(textBoxSearch.Text);
+                List<PlayList> playlists;
+                playlists = client.playListSearch.SearchQuery(textBoxSearch.Text);
 
-                foreach (Playlist playlist in playlists)
-                    listBoxResult.Items.Add(new UserControlPlaylist(playlist, listBoxDownload));
-                 */
+                foreach (PlayList playlist in playlists)
+                    listBoxResult.Items.Add(new UserControlPlayList(playlist, listBoxDownload));
             }
             else
             {
@@ -101,19 +108,28 @@ namespace TestSoundCloud
 
                 foreach (User user in users)
                     listBoxResult.Items.Add(new UserControlUser(user, listBoxDownload));
-
             }
-
-
         }
 
-        private void stackPanel2_SizeChanged(object sender, SizeChangedEventArgs e)
+        private void listBoxResult_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            foreach (UserControlTrack item in listBoxResult.Items)
+            ListBox listBoxSender = (ListBox)sender;
+
+            if (sender == listBoxResult)
             {
-                item.labelTitle.Width = item.Width - item.labelTitle.Margin.Left - item.labelTitle.Margin.Right;
+                if (listBoxResult.SelectedItem == null)
+                    return;
+
+                updatePreview(((UserControlTrack)listBoxResult.SelectedItem).Track);
+            }
+            else
+            {
+                if (listBoxDownload.SelectedItem == null)
+                    return;
+
+                updatePreview(((UserControlTrack)listBoxDownload.SelectedItem).Track);
             }
         }
-
     }
 }
+

@@ -6,7 +6,7 @@
              mc:Ignorable="d" Height="330" Width="490">
     <Grid>
         <Label Content="Title - Ma bite" Height="37" HorizontalAlignment="Left" Margin="225,12,0,0" Name="labelTitle" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Width="Auto" />
-        <Button Content="Author" Height="28" HorizontalAlignment="Left" Margin="202,51,0,0" Name="labelAuthor" VerticalAlignment="Top" Width="Auto" Background="{x:Null}" BorderBrush="{x:Null}" >
+        <Button Content="Author" Height="28" HorizontalAlignment="Left" Margin="202,51,0,0" Name="labelAuthor" VerticalAlignment="Top" Width="Auto" Background="{x:Null}" BorderBrush="{x:Null}" Click="labelAuthor_Click">
             <Button.Style>
                 <Style TargetType="{x:Type Button}">
                     <Setter Property="Foreground" Value="Black" />
