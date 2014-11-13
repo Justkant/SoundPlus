@@ -67,13 +67,10 @@ C:\Users\kant\Documents\GitHub\SoundPlus\TestSoundCloud\bin\Debug\Newtonsoft.Jso
 C:\Users\kant\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Debug\TestSoundCloud.csprojResolveAssemblyReference.cache
 C:\Users\kant\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Debug\UserControl\UserControlTrack.baml
 C:\Users\kant\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Debug\UserControl\UserControlTrackDl.baml
-C:\Users\kant\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Debug\UserControl\UserControlTrackPreview.baml
 C:\Users\kant\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Debug\MainWindow.g.cs
 C:\Users\kant\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Debug\UserControl\UserControlTrack.g.cs
 C:\Users\kant\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Debug\UserControl\UserControlTrackDl.g.cs
-C:\Users\kant\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Debug\UserControl\UserControlTrackPreview.g.cs
 C:\Users\kant\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Debug\App.g.cs
-C:\Users\kant\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\kant\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Debug\TestSoundCloud_MarkupCompile.cache
 C:\Users\kant\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Debug\TestSoundCloud_MarkupCompile.lref
 C:\Users\kant\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Debug\MainWindow.baml
@@ -90,3 +87,13 @@ C:\Users\Guillaume\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Debug\UserC
 C:\Users\Guillaume\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Debug\UserControl\Preview\UserControlUserPreview.g.cs
 C:\Users\Guillaume\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Debug\UserControl\Preview\UserControlPlayListPreview.g.cs
 C:\Users\Guillaume\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Debug\UserControl\Preview\UserControlTrackPreview.g.cs
+C:\Users\kant\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Debug\UserControl\UserControlPlayList.baml
+C:\Users\kant\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Debug\UserControl\Preview\UserControlUserPreview.baml
+C:\Users\kant\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Debug\UserControl\Preview\UserControlPlayListPreview.baml
+C:\Users\kant\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Debug\UserControl\UserControlUser.baml
+C:\Users\kant\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Debug\UserControl\Preview\UserControlTrackPreview.baml
+C:\Users\kant\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Debug\UserControl\UserControlPlayList.g.cs
+C:\Users\kant\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Debug\UserControl\Preview\UserControlUserPreview.g.cs
+C:\Users\kant\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Debug\UserControl\Preview\UserControlPlayListPreview.g.cs
+C:\Users\kant\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Debug\UserControl\UserControlUser.g.cs
+C:\Users\kant\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Debug\UserControl\Preview\UserControlTrackPreview.g.cs
