@@ -110,3 +110,7 @@ let builder bundle =
 *.exe
 *.exe
 *.lref
+*.suo
+*.suo
+TestSoundCloud.suo
+TestSoundCloud/obj/x86/Debug/GeneratedInternalTypeHelper.g.cs
