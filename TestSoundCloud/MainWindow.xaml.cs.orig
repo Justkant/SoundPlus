@@ -29,8 +29,8 @@ namespace TestSoundCloud
             trackPreview.Visibility = System.Windows.Visibility.Hidden;
 
             client = new SoundCloudClient();
-            textBoxSearch.Focus();
-            radioButtonTracks.IsChecked = true;
+            textBoxSearch.Text = "savant";
+            buttonSearch_Click(null, null);
         }
 
         private void buttonSearch_Click(object sender, RoutedEventArgs e)
@@ -72,48 +72,16 @@ namespace TestSoundCloud
 
         private void textBoxSearch_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Key != Key.Enter) return;
-
-            listBoxResult.Items.Clear();
-
-            if (radioButtonTracks.IsChecked.Value)
-            {
-                List<Track> tracks;
-                tracks = client.trackSearch.SearchQuery(textBoxSearch.Text);
-
-                foreach (Track track in tracks)
-                    listBoxResult.Items.Add(new UserControlTrack(track, listBoxDownload));
-            }
-            else if (radioButtonPlaylists.IsChecked.Value)
-            {
-                /* Uncomment when playlists are implemented
-                List<Playlist> playlists;
-                playlists = client.playlistSearch.SearchQuery(textBoxSearch.Text);
-
-                foreach (Playlist playlist in playlists)
-                    listBoxResult.Items.Add(new UserControlPlaylist(playlist, listBoxDownload));
-                 */
-            }
-            else
-            {
-                List<User> users;
-                users = client.userSearch.SearchQuery(textBoxSearch.Text);
-
-                foreach (User user in users)
-                    listBoxResult.Items.Add(new UserControlUser(user, listBoxDownload));
-
-            }
-
-
+            if (e.Key == Key.Enter)
+                buttonSearch_Click(null, null);
         }
 
-        private void stackPanel2_SizeChanged(object sender, SizeChangedEventArgs e)
+        private void GridSplitter_DragOver(object sender, DragEventArgs e)
         {
             foreach (UserControlTrack item in listBoxResult.Items)
             {
                 item.labelTitle.Width = item.Width - item.labelTitle.Margin.Left - item.labelTitle.Margin.Right;
             }
         }
-
     }
 }
