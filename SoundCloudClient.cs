@@ -11,13 +11,6 @@ namespace SoundPlus
     
     class SoundCloudClient
     {
-        enum SearchMode
-        {
-            Track,
-            User,
-            Playlist
-        }
-
         static private string ClientId = "6db7be918aec176b9fc591ca1aade517";
         static private string ClientSecret = "b8230bb9c62077357b05bb54440fae52";
 
@@ -25,8 +18,6 @@ namespace SoundPlus
 
         private Search<Track> trackSearch;
         private Search<User> userSearch;
-
-        public SearchMode searchMode { get; set; }
 
         public SoundCloudClient()
         {
@@ -38,6 +29,11 @@ namespace SoundPlus
         public List<Track> SearchTrack(string q, int limit = 15, int offset = 0)
         {
             return (trackSearch.SearchQuery(q, limit, offset));
+        }
+
+        public List<User> SearchUser(string q, int limit = 15, int offset = 0)
+        {
+            return (userSearch.SearchQuery(q, limit, offset));
         }
 
         public List<Track> NextPage()
