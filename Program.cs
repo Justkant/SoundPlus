@@ -25,6 +25,7 @@ namespace SoundPlus
             {
                 Console.WriteLine(track.title + "\n");
             }
+
             Console.ReadKey(true);
         }
     }

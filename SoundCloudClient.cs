@@ -11,53 +11,43 @@ namespace SoundPlus
     
     class SoundCloudClient
     {
+        enum SearchMode
+        {
+            Track,
+            User,
+            Playlist
+        }
+
         static private string ClientId = "6db7be918aec176b9fc591ca1aade517";
         static private string ClientSecret = "b8230bb9c62077357b05bb54440fae52";
 
-        private string curr_q;
-        private int curr_offset;
-        private int curr_limit;
-
         private WebClient client;
+
+        private Search<Track> trackSearch;
+        private Search<User> userSearch;
+
+        public SearchMode searchMode { get; set; }
 
         public SoundCloudClient()
         {
             client = new WebClient();
-            curr_offset = 0;
-            curr_limit = 15;
-            curr_q = "";
-        }
-
-        private List<Track> CurrentSearch()
-        {
-            string uri = "https://api.soundcloud.com/tracks.json?client_id=" + ClientId +
-                    "&q=" + curr_q +
-                    "&limit=" + curr_limit +
-                    "&offset=" + curr_offset;
-            string res = client.DownloadString(uri);
-            return (JsonConvert.DeserializeObject<List<Track>>(res));
+            trackSearch = new Search<Track>(client, ClientId, "tracks");
+            userSearch = new Search<User>(client, ClientId, "users");
         }
 
         public List<Track> SearchTrack(string q, int limit = 15, int offset = 0)
         {
-            curr_q = q;
-            curr_offset = offset;
-            curr_limit = limit;
-            return (CurrentSearch());
+            return (trackSearch.SearchQuery(q, limit, offset));
         }
 
         public List<Track> NextPage()
         {
-            curr_offset += curr_limit;
-            return (CurrentSearch());
+            return (trackSearch.NextPage());
         }
 
         public List<Track> PrevPage()
         {
-            curr_offset -= curr_limit;
-            if (curr_offset < 0)
-                curr_offset = 0;
-            return (CurrentSearch());
+            return (trackSearch.PrevPage());
         }
     }
 }
