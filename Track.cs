@@ -40,7 +40,7 @@ namespace SoundPlus
         public string download_url { get; set; }
         public string stream_url { get; set; }
         public string video_url { get; set; }
-        public int? bpm { get; set; }
+        public float? bpm { get; set; }
         public bool commentable { get; set; }
         public string iscr { get; set; }
         public string key_signature { get; set; }
