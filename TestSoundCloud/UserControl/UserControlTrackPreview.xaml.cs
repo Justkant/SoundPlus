@@ -26,6 +26,8 @@ namespace TestSoundCloud
 
         public void update(Track track)
         {
+            stackPanelTags.Children.Clear();
+
             labelTitle.Content = track.title;
             labelAuthor.Content = track.user.username;
 
@@ -50,6 +52,18 @@ namespace TestSoundCloud
             labelStartedOn.Content = track.release;
             labelPlays.Content = track.playback_count;
             labelLikes.Content = track.favoritings_count.ToString();
+
+            foreach(String tag in track.GetTagList())
+            {
+                Button button = new Button();
+                button.Content = "#" + tag;
+                button.BorderThickness = new Thickness(0);
+                button.Padding = new Thickness(5, 2, 5, 2);
+                button.Margin = new Thickness(0, 3, 10, 3);
+                stackPanelTags.Children.Add(button);
+            }
+
+            textBlockDescription.Text = track.description;
         }
     }
 }
