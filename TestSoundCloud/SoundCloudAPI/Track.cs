@@ -51,5 +51,22 @@ namespace TestSoundCloud
         public string original_format { get; set; }
         public int? original_content_size { get; set; }
         public bool user_favorite { get; set; }
+
+        public List<String> GetTagList()
+        {
+            String[] tags = tag_list.Split(' ');
+            List<String> tags2 = new List<string>();
+
+            foreach (String tag in tags)
+                if (tag.Length > 0)
+                {
+                    if (tag[0] == '"')
+                        tags2.Add(tag.Substring(1, tag.Length - 2));
+                    else
+                        tags2.Add(tag);
+                }
+
+            return tags2;
+        }
     }
 }

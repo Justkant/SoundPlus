@@ -7,7 +7,7 @@
             <Button Content="O" Height="23" Margin="201,6,0,0" Name="buttonSearch" VerticalAlignment="Top" Click="buttonSearch_Click" HorizontalAlignment="Left" Width="24" />
             <TextBox Height="23" Margin="6,6,0,0" Name="textBoxSearch" VerticalAlignment="Top" HorizontalAlignment="Left" Width="192" KeyDown="textBoxSearch_KeyDown" />
         </Grid>
-        <Grid Margin="0,33,0,31" Name="stackPanel2" Background="#FFEDEDED">
+        <Grid Margin="0,33,0,31" Name="stackPanel2" Background="#FFEDEDED" SizeChanged="stackPanel2_SizeChanged">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="2*"></ColumnDefinition>
                 <ColumnDefinition Width="3"></ColumnDefinition>
@@ -15,8 +15,8 @@
                 <ColumnDefinition Width="3"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <ListBox Grid.Column="0" Height="Auto" HorizontalAlignment="Stretch" Name="listBoxResult" VerticalAlignment="Top" HorizontalContentAlignment="Stretch" MouseUp="listBoxResult_MouseUp" />
-            <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Stretch" DragOver="GridSplitter_DragOver"></GridSplitter>
+            <ListBox Grid.Column="0" Height="Auto" HorizontalAlignment="Stretch" Name="listBoxResult" VerticalAlignment="Top" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Stretch" MouseUp="listBoxResult_MouseUp" />
+            <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Stretch"></GridSplitter>
             <my:UserControlTrackPreview Grid.Column="2" HorizontalAlignment="Stretch" Grid.ColumnSpan="2" x:Name="trackPreview" Width="Auto" VerticalAlignment="Top" Height="479"></my:UserControlTrackPreview>
             <GridSplitter Grid.Column="3" Width="5" HorizontalAlignment="Stretch"></GridSplitter>
             <ListBox Grid.Column="4" Height="Auto" HorizontalAlignment="Stretch" Name="listBoxDownload" VerticalAlignment="Top" HorizontalContentAlignment="Stretch" MouseUp="listBoxResult_MouseUp" />

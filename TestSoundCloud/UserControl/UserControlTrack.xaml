@@ -4,11 +4,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" d:DesignHeight="64" d:DesignWidth="181">
-    <Grid HorizontalAlignment="Left">
-        <Label Content="author" HorizontalAlignment="Left" Name="labelAuthor" FontSize="11" Margin="46,-2,0,0" Height="28" VerticalAlignment="Top" />
+    <Grid>
+        <Label Content="author" HorizontalAlignment="Left" Name="labelAuthor" FontSize="11" Margin="49,-2,0,0" Height="28" VerticalAlignment="Top" />
         <Label Content="5:32" FontSize="11" Height="28" HorizontalAlignment="Right" Name="labelDuration" VerticalAlignment="Top" Margin="0,-2,0,0"></Label>
         <Button Content="DL" Name="buttonDownload" AllowDrop="False" BorderBrush="{x:Null}" HorizontalAlignment="Right" Width="47" Height="19" VerticalAlignment="Bottom" Margin="0,0,0,3" Click="buttonDownload_Click" />
         <Image HorizontalAlignment="Left" Name="image" Stretch="Fill" Width="47" Height="47" VerticalAlignment="Center" />
-        <TextBox Height="41" HorizontalAlignment="Left" Margin="52,20,28,0" Name="labelTitle" VerticalAlignment="Top" Width="Auto" Text="Title - Ma Bite sur ton Front" IsReadOnly="True" Background="{x:Null}" BorderBrush="{x:Null}" TextWrapping="Wrap" />
+        <TextBox Height="41" HorizontalAlignment="Left" Margin="55,20,0,0" Name="labelTitle" VerticalAlignment="Top" Width="Auto" Text="Title - Ma Bite sur ton Front" IsReadOnly="True" Background="{x:Null}" BorderBrush="{x:Null}" TextWrapping="Wrap" HorizontalScrollBarVisibility="Auto" MaxLines="2" />
     </Grid>
 </UserControl>

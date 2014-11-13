@@ -29,6 +29,7 @@ namespace TestSoundCloud
             trackPreview.Visibility = System.Windows.Visibility.Hidden;
 
             client = new SoundCloudClient();
+            textBoxSearch.Focus();
         }
 
         private void buttonSearch_Click(object sender, RoutedEventArgs e)
@@ -74,12 +75,13 @@ namespace TestSoundCloud
                 buttonSearch_Click(null, null);
         }
 
-        private void GridSplitter_DragOver(object sender, DragEventArgs e)
+        private void stackPanel2_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             foreach (UserControlTrack item in listBoxResult.Items)
             {
                 item.labelTitle.Width = item.Width - item.labelTitle.Margin.Left - item.labelTitle.Margin.Right;
             }
         }
+
     }
 }
