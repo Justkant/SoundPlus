@@ -29,6 +29,8 @@ namespace TestSoundCloud
             trackPreview.Visibility = System.Windows.Visibility.Hidden;
 
             client = new SoundCloudClient();
+            textBoxSearch.Text = "savant";
+            buttonSearch_Click(null, null);
         }
 
         private void buttonSearch_Click(object sender, RoutedEventArgs e)
