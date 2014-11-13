@@ -33,7 +33,7 @@
         <Image Height="83" Margin="187,89,12,0" Name="imageSound" Stretch="Fill" VerticalAlignment="Top" />
         <Button Content="Download" Height="23" Margin="0,12,12,0" Name="button2" VerticalAlignment="Top" HorizontalAlignment="Right" Width="75" />
         <Label Content="Posted on" Height="28" HorizontalAlignment="Left" Margin="12,178,0,0" Name="label1" VerticalAlignment="Top" />
-        <Label Content="Nov 13, 2014" Height="28" HorizontalAlignment="Right" Margin="0,178,339,0" Name="labelStartedOn" VerticalAlignment="Top" />
+        <Label Content="Nov 13, 2014" Height="28" Margin="71,178,0,0" Name="labelStartedOn" VerticalAlignment="Top" HorizontalAlignment="Left" />
         <Label Content="49:19" Height="28" Margin="0,178,154,0" Name="labelDuration" VerticalAlignment="Top" HorizontalAlignment="Right" Width="Auto" />
         <Label Content="|" Height="28" HorizontalAlignment="Right" Margin="0,177,144,0" Name="label2" VerticalAlignment="Top" Width="Auto" />
         <Label Content="5670" Height="28" HorizontalAlignment="Right" Margin="0,178,91,0" Name="labelPlays" VerticalAlignment="Top" Width="Auto" />

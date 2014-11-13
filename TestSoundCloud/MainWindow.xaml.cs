@@ -30,6 +30,7 @@ namespace TestSoundCloud
 
             client = new SoundCloudClient();
             textBoxSearch.Focus();
+            radioButtonTracks.IsChecked = true;
         }
 
         private void buttonSearch_Click(object sender, RoutedEventArgs e)
@@ -71,8 +72,39 @@ namespace TestSoundCloud
 
         private void textBoxSearch_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Key == Key.Enter)
-                buttonSearch_Click(null, null);
+            if (e.Key != Key.Enter) return;
+
+            listBoxResult.Items.Clear();
+
+            if (radioButtonTracks.IsChecked.Value)
+            {
+                List<Track> tracks;
+                tracks = client.trackSearch.SearchQuery(textBoxSearch.Text);
+
+                foreach (Track track in tracks)
+                    listBoxResult.Items.Add(new UserControlTrack(track, listBoxDownload));
+            }
+            else if (radioButtonPlaylists.IsChecked.Value)
+            {
+                /* Uncomment when playlists are implemented
+                List<Playlist> playlists;
+                playlists = client.playlistSearch.SearchQuery(textBoxSearch.Text);
+
+                foreach (Playlist playlist in playlists)
+                    listBoxResult.Items.Add(new UserControlPlaylist(playlist, listBoxDownload));
+                 */
+            }
+            else
+            {
+                List<User> users;
+                users = client.userSearch.SearchQuery(textBoxSearch.Text);
+
+                foreach (User user in users)
+                    listBoxResult.Items.Add(new UserControlUser(user, listBoxDownload));
+
+            }
+
+
         }
 
         private void stackPanel2_SizeChanged(object sender, SizeChangedEventArgs e)
