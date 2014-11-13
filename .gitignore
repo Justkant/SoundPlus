@@ -106,3 +106,7 @@ let builder bundle =
         | Item (e, bundle) -> match e with
             | e when is_letter e -> Var (String.make 1 e)
             | e when e = '|' -> Or (builder_aux )
+*.suo
+*.exe
+*.exe
+*.lref
