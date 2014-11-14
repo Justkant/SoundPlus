@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              d:DesignHeight="379" d:DesignWidth="560">
+    <ScrollViewer VerticalScrollBarVisibility="Hidden">
     <Grid>
         <StackPanel Orientation="Vertical" Background="#FF1B1B1B">
             <Grid Height="Auto" Margin="10,10,10,0">
@@ -74,4 +75,5 @@
             
         </StackPanel>
     </Grid>
+    </ScrollViewer>
 </UserControl>
