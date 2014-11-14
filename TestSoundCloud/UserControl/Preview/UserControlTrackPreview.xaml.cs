@@ -19,13 +19,15 @@ namespace TestSoundCloud
     /// </summary>
     public partial class UserControlTrackPreview : UserControl
     {
-        public Window parent;
+        MainWindow parent;
+        Track track;
 
-        public UserControlTrackPreview(Track track, Window parent)
+        public UserControlTrackPreview(Track track, MainWindow parent)
         {
             InitializeComponent();
 
             this.parent = parent;
+            this.track = track;
 
             stackPanelTags.Children.Clear();
 
@@ -61,10 +63,31 @@ namespace TestSoundCloud
                 button.BorderThickness = new Thickness(0);
                 button.Padding = new Thickness(5, 2, 5, 2);
                 button.Margin = new Thickness(0, 3, 10, 3);
+                button.Click += new RoutedEventHandler(buttonTag_Click);
                 stackPanelTags.Children.Add(button);
             }
 
             textBlockDescription.Text = track.description;
         }
+        private void buttonTag_Click(object sender, RoutedEventArgs e)
+        {
+            Button tagSender = (Button)sender;
+            parent.textBoxSearch.Text = tagSender.Content.ToString();
+
+            parent.SearchEngine();
+        }
+
+            Button userSender = (Button)sender;
+            parent.textBoxSearch.Text = userSender.Content.ToString();
+
+            parent.radioButtonUsers.IsChecked = true;
+
+            parent.SearchEngine();
+        }
+
+        private void buttonDownload_Click(object sender, RoutedEventArgs e)
+        {
+            parent.listBoxDownload.Items.Add(new UserControlTrackDl(track));
+            buttonDownload.IsEnabled = false;
     }
 }

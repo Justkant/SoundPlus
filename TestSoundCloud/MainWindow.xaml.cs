@@ -71,7 +71,7 @@ namespace TestSoundCloud
             stackPanel2.Children.Add(userPreview);
         }
 
-        private void SearchEngine()
+        public void SearchEngine()
         {
             listBoxResult.Items.Clear();
 
