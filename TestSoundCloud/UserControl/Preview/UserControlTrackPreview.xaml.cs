@@ -34,6 +34,15 @@ namespace TestSoundCloud
             labelTitle.Content = track.title;
             labelAuthor.Content = track.user.username;
 
+            if (track.user.avatar_url != null)
+            {
+                BitmapImage img = new BitmapImage();
+                img.BeginInit();
+                img.UriSource = new Uri(track.user.avatar_url, UriKind.Absolute);
+                img.EndInit();
+                imageAuthor.Source = img;
+            }
+
             if (track.artwork_url != null)
             {
                 BitmapImage img = new BitmapImage();

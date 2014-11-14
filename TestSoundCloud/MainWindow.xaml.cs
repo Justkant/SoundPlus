@@ -46,6 +46,7 @@ namespace TestSoundCloud
             ClearColumn(2);
             trackPreview = new UserControlTrackPreview(track, this);
             trackPreview.Width = Double.NaN;
+            trackPreview.Height = Double.NaN;
             trackPreview.VerticalAlignment = System.Windows.VerticalAlignment.Top;
             Grid.SetColumn(trackPreview, 2);
             stackPanel2.Children.Add(trackPreview);
@@ -56,6 +57,7 @@ namespace TestSoundCloud
             ClearColumn(2);
             playListPreview = new UserControlPlayListPreview(playList, this);
             playListPreview.Width = Double.NaN;
+            trackPreview.Height = Double.NaN;
             playListPreview.VerticalAlignment = System.Windows.VerticalAlignment.Top;
             Grid.SetColumn(playListPreview, 2);
             stackPanel2.Children.Add(playListPreview);
@@ -66,6 +68,7 @@ namespace TestSoundCloud
             ClearColumn(2);
             userPreview = new UserControlUserPreview(user, this);
             userPreview.Width = Double.NaN;
+            trackPreview.Height = Double.NaN;
             userPreview.VerticalAlignment = System.Windows.VerticalAlignment.Top;
             Grid.SetColumn(userPreview, 2);
             stackPanel2.Children.Add(userPreview);
@@ -116,7 +119,12 @@ namespace TestSoundCloud
                 if (listBoxResult.SelectedItem == null)
                     return;
 
-                updatePreview(((UserControlTrack)listBoxResult.SelectedItem).Track);
+                if (radioButtonTracks.IsChecked.Value)
+                    updatePreview(((UserControlTrack)listBoxResult.SelectedItem).Track);
+                else if (radioButtonPlaylists.IsChecked.Value)
+                    updatePreview(((UserControlPlaylist)listBoxResult.SelectedItem).Playlist);
+                else 
+                    updatePreview(((UserControlUser)listBoxResult.SelectedItem).User);
             }
             else
             {
