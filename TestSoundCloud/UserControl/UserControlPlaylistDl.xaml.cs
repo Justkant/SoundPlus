@@ -15,13 +15,17 @@ using System.Windows.Shapes;
 namespace TestSoundCloud
 {
     /// <summary>
-    /// Logique d'interaction pour UserControlPlayListPreview.xaml
+    /// Logique d'interaction pour UserControlPlaylistDl.xaml
     /// </summary>
-    public partial class UserControlPlayListPreview : UserControl
+    public partial class UserControlPlaylistDl : UserControl
     {
-        public UserControlPlayListPreview(Playlist playList, Window parent)
+        public Playlist Playlist;
+
+        public UserControlPlaylistDl(Playlist playlist)
         {
             InitializeComponent();
+
+            Playlist = playlist;
         }
     }
 }

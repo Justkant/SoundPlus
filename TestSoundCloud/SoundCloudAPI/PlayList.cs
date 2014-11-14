@@ -5,7 +5,7 @@ using System.Text;
 
 namespace TestSoundCloud
 {
-    public class PlayList
+    public class Playlist
     {
         public int? id { get; set; }
         public string created_at { get; set; }

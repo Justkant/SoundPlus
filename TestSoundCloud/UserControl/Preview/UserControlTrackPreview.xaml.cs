@@ -66,10 +66,5 @@ namespace TestSoundCloud
 
             textBlockDescription.Text = track.description;
         }
-
-        private void labelAuthor_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
     }
 }

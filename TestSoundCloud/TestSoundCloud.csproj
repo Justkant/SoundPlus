@@ -58,19 +58,22 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="SoundCloudAPI\PlayList.cs" />
+    <Compile Include="SoundCloudAPI\Playlist.cs" />
     <Compile Include="SoundCloudAPI\Search.cs" />
     <Compile Include="SoundCloudAPI\SoundCloudClient.cs" />
     <Compile Include="SoundCloudAPI\Track.cs" />
     <Compile Include="SoundCloudAPI\User.cs" />
-    <Compile Include="UserControl\UserControlPlayList.xaml.cs">
-      <DependentUpon>UserControlPlayList.xaml</DependentUpon>
+    <Compile Include="UserControl\UserControlPlaylist.xaml.cs">
+      <DependentUpon>UserControlPlaylist.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControl\Preview\UserControlUserPreview.xaml.cs">
       <DependentUpon>UserControlUserPreview.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControl\Preview\UserControlPlayListPreview.xaml.cs">
       <DependentUpon>UserControlPlayListPreview.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UserControlPlaylistDl.xaml.cs">
+      <DependentUpon>UserControlPlaylistDl.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControl\UserControlUser.xaml.cs">
       <DependentUpon>UserControlUser.xaml</DependentUpon>
@@ -96,7 +99,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="UserControl\UserControlPlayList.xaml">
+    <Page Include="UserControl\UserControlPlaylist.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -105,6 +108,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControl\Preview\UserControlPlayListPreview.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl\UserControlPlaylistDl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

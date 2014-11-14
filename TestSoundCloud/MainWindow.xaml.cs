@@ -51,7 +51,7 @@ namespace TestSoundCloud
             stackPanel2.Children.Add(trackPreview);
         }
 
-        private void updatePreview(PlayList playList)
+        private void updatePreview(Playlist playList)
         {
             ClearColumn(2);
             playListPreview = new UserControlPlayListPreview(playList, this);
@@ -85,11 +85,11 @@ namespace TestSoundCloud
             }
             else if (radioButtonPlaylists.IsChecked.Value)
             {
-                List<PlayList> playlists;
-                playlists = client.playListSearch.SearchQuery(textBoxSearch.Text);
+                List<Playlist> playlists;
+                playlists = client.playlistSearch.SearchQuery(textBoxSearch.Text);
 
-                foreach (PlayList playlist in playlists)
-                    listBoxResult.Items.Add(new UserControlPlayList(playlist, listBoxDownload));
+                foreach (Playlist playlist in playlists)
+                    listBoxResult.Items.Add(new UserControlPlaylist(playlist, listBoxDownload));
             }
             else
             {

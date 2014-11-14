@@ -19,9 +19,32 @@ namespace TestSoundCloud
     /// </summary>
     public partial class UserControlUser : UserControl
     {
+        public User User;
+
+        ListBox listBoxDownload;
+
         public UserControlUser(User user, ListBox listBoxDownload)
         {
             InitializeComponent();
+
+            User = user;
+
+            this.listBoxDownload = listBoxDownload;
+
+            labelTitle.MaxLines = 2;
+            labelTitle.Text = user.username;
+            labelAuthor.Content = user.full_name;
+
+            labelDuration.Content = user.track_count;
+
+            if (user.avatar_url != null)
+            {
+                BitmapImage img = new BitmapImage();
+                img.BeginInit();
+                img.UriSource = new Uri(user.avatar_url, UriKind.Absolute);
+                img.EndInit();
+                image.Source = img;
+            }
         }
     }
 }
