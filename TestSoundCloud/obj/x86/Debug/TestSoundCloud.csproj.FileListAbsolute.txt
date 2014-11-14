@@ -98,3 +98,4 @@ C:\Users\kant\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Debug\TestSoundC
 C:\Users\kant\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Debug\TestSoundCloud.csproj.GenerateResource.Cache
 C:\Users\kant\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Debug\TestSoundCloud.exe
 C:\Users\kant\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Debug\TestSoundCloud.pdb
+C:\Users\kant\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Debug\TestSoundCloud.csprojResolveAssemblyReference.cache

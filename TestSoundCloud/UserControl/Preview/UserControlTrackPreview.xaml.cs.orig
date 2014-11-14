@@ -56,7 +56,7 @@ namespace TestSoundCloud
             labelPlays.Content = track.playback_count;
             labelLikes.Content = track.favoritings_count.ToString();
 
-            foreach (String tag in track.GetTagList())
+            foreach(String tag in track.GetTagList())
             {
                 Button button = new Button();
                 button.Content = "#" + tag;
@@ -69,18 +69,18 @@ namespace TestSoundCloud
 
             textBlockDescription.Text = track.description;
         }
+<<<<<<< HEAD
+=======
 
         private void buttonTag_Click(object sender, RoutedEventArgs e)
         {
             Button tagSender = (Button)sender;
-            parent.textBoxSearch.Text = tagSender.Content.ToString().Remove(0, 1);
+            parent.textBoxSearch.Text = tagSender.Content.ToString();
 
-            parent.radioButtonTracks.IsChecked = true;
-            
             parent.SearchEngine();
         }
 
-        private void buttonUser_Click(object sender, RoutedEventArgs e)
+        private void labelAuthor_Click(object sender, RoutedEventArgs e)
         {
             Button userSender = (Button)sender;
             parent.textBoxSearch.Text = userSender.Content.ToString();
@@ -95,5 +95,6 @@ namespace TestSoundCloud
             parent.listBoxDownload.Items.Add(new UserControlTrackDl(track));
             buttonDownload.IsEnabled = false;
         }
+>>>>>>> 2bf5517939aa1b98818abdaa2d3c8b86fd9a0fc8
     }
 }
