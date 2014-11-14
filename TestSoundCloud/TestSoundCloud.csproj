@@ -63,7 +63,7 @@
     <Compile Include="SoundCloudAPI\SoundCloudClient.cs" />
     <Compile Include="SoundCloudAPI\Track.cs" />
     <Compile Include="SoundCloudAPI\User.cs" />
-    <Compile Include="UserControlPlayer.xaml.cs">
+    <Compile Include="UserControl\UserControlPlayer.xaml.cs">
       <DependentUpon>UserControlPlayer.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControl\UserControlListItem.xaml.cs">
@@ -75,8 +75,8 @@
     <Compile Include="UserControl\Preview\UserControlUserPreview.xaml.cs">
       <DependentUpon>UserControlUserPreview.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\Preview\UserControlPlayListPreview.xaml.cs">
-      <DependentUpon>UserControlPlayListPreview.xaml</DependentUpon>
+    <Compile Include="UserControl\Preview\UserControlPlaylistPreview.xaml.cs">
+      <DependentUpon>UserControlPlaylistPreview.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControl\UserControlPlaylistDl.xaml.cs">
       <DependentUpon>UserControlPlaylistDl.xaml</DependentUpon>
@@ -105,7 +105,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="UserControlPlayer.xaml">
+    <Page Include="UserControl\UserControlPlayer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -121,7 +121,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControl\Preview\UserControlPlayListPreview.xaml">
+    <Page Include="UserControl\Preview\UserControlPlaylistPreview.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

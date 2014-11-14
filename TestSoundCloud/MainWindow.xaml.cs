@@ -21,7 +21,7 @@ namespace TestSoundCloud
     {
         SoundCloudClient client;
         UserControlTrackPreview trackPreview;
-        UserControlPlayListPreview playListPreview;
+        UserControlPlaylistPreview playListPreview;
         UserControlUserPreview userPreview;
 
         public MainWindow()
@@ -55,9 +55,9 @@ namespace TestSoundCloud
         private void updatePreview(Playlist playList)
         {
             ClearColumn(2);
-            playListPreview = new UserControlPlayListPreview(playList, this);
+            playListPreview = new UserControlPlaylistPreview(playList, this);
             playListPreview.Width = Double.NaN;
-            trackPreview.Height = Double.NaN;
+            playListPreview.Height = Double.NaN;
             playListPreview.VerticalAlignment = System.Windows.VerticalAlignment.Top;
             Grid.SetColumn(playListPreview, 2);
             stackPanel2.Children.Add(playListPreview);

@@ -17,11 +17,29 @@ namespace TestSoundCloud
     /// <summary>
     /// Logique d'interaction pour UserControlPlayListPreview.xaml
     /// </summary>
-    public partial class UserControlPlayListPreview : UserControl
+    public partial class UserControlPlaylistPreview : UserControl
     {
-        public UserControlPlayListPreview(Playlist playList, Window parent)
+        MainWindow parent;
+        Playlist playlist;
+
+        public UserControlPlaylistPreview(Playlist playlist, MainWindow parent)
         {
             InitializeComponent();
+
+            this.parent = parent;
+            this.playlist = playlist;
+
+            if (playlist.artwork_url != null)
+            {
+                BitmapImage img = new BitmapImage();
+                img.BeginInit();
+                img.UriSource = new Uri(playlist.artwork_url, UriKind.Absolute);
+                img.EndInit();
+                image.Source = img;
+            }
+
+            this.labelTitle.Content = playlist.title;
+            this.labelUser.Content = playlist.user.username;
         }
     }
 }
