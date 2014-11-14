@@ -53,7 +53,7 @@
                 <RadioButton Content="Users" Height="16" Name="radioButtonUsers" Padding="0" Margin="5,0" BorderBrush="{x:Null}" Background="#FF343434" Foreground="White" />
             </StackPanel>
             
-            <Grid Grid.Row="2" Name="stackPanel2" Background="#FF2C2C2C" ScrollViewer.VerticalScrollBarVisibility="Hidden" MaxHeight="800">
+            <Grid Grid.Row="2" Name="stackPanel2" Background="#FF2C2C2C" ScrollViewer.VerticalScrollBarVisibility="Hidden" MaxHeight="1000">
             
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="2*"/>
