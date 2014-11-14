@@ -25,5 +25,10 @@ namespace TestSoundCloud
         public int? followers_count { get; set; }
         public int? followings_count { get; set; }
         public int? public_favorites_count { get; set; }
+
+        public void Download(string path)
+        {
+
+        }
     }
 }

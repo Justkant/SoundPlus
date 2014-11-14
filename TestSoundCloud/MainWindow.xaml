@@ -13,19 +13,47 @@
 
         <Grid>
             <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="33"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="48"/>
             </Grid.RowDefinitions>
-            
-            <StackPanel Grid.Row="0" Name="stackPanel1" Orientation="Horizontal" VerticalAlignment="Stretch" Background="#FF2C2C2C">
+
+            <Menu Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Top" Width="Auto">
+                <MenuItem Header="File">
+                    <MenuItem Header="One..." HorizontalAlignment="Left" Width="140"/>
+                    <MenuItem Header="Two..." HorizontalAlignment="Left" Width="140"/>
+                    <Separator HorizontalAlignment="Left" Width="140"/>
+                    <MenuItem Header="Three..." HorizontalAlignment="Left" Width="140"/>
+                </MenuItem>
+                <MenuItem Header="Edit">
+                    <MenuItem Header="One..." HorizontalAlignment="Left" Width="140"/>
+                    <MenuItem Header="Two..." HorizontalAlignment="Left" Width="140"/>
+                    <Separator HorizontalAlignment="Left" Width="140"/>
+                    <MenuItem Header="Three..." HorizontalAlignment="Left" Width="140"/>
+                </MenuItem>
+                <MenuItem Header="View">
+                    <MenuItem Header="One..." HorizontalAlignment="Left" Width="140"/>
+                    <MenuItem Header="Two..." HorizontalAlignment="Left" Width="140"/>
+                    <Separator HorizontalAlignment="Left" Width="140"/>
+                    <MenuItem Header="Three..." HorizontalAlignment="Left" Width="140"/>
+                </MenuItem>
+                <MenuItem Header="Account">
+                    <MenuItem Header="One..." HorizontalAlignment="Left" Width="140"/>
+                    <MenuItem Header="Two..." HorizontalAlignment="Left" Width="140"/>
+                    <Separator HorizontalAlignment="Left" Width="140"/>
+                    <MenuItem Header="Three..." HorizontalAlignment="Left" Width="140"/>
+                </MenuItem>
+            </Menu>
+
+            <StackPanel Grid.Row="1" Name="stackPanel1" Orientation="Horizontal" VerticalAlignment="Stretch" Background="#FF2C2C2C">
                 <TextBox Height="23" Margin="6,6,0,0" Name="textBoxSearch" VerticalAlignment="Top" HorizontalAlignment="Left" Width="212" KeyDown="textBoxSearch_KeyDown" Background="#FF515151" Foreground="White" BorderBrush="{x:Null}" SelectionBrush="#FF008BEC" />
                 <RadioButton Content="Tracks" Height="16" Name="radioButtonTracks" Padding="0" Margin="5,0" Background="#FF464646" BorderBrush="{x:Null}" Foreground="White" />
                 <RadioButton Content="Playlists" Height="16" Name="radioButtonPlaylists" Padding="0" Margin="5,0" BorderBrush="{x:Null}" Background="#FF343434" Foreground="White" />
                 <RadioButton Content="Users" Height="16" Name="radioButtonUsers" Padding="0" Margin="5,0" BorderBrush="{x:Null}" Background="#FF343434" Foreground="White" />
             </StackPanel>
             
-            <Grid Grid.Row="1" Name="stackPanel2" Background="#FF2C2C2C" ScrollViewer.VerticalScrollBarVisibility="Hidden" MaxHeight="800">
+            <Grid Grid.Row="2" Name="stackPanel2" Background="#FF2C2C2C" ScrollViewer.VerticalScrollBarVisibility="Hidden" MaxHeight="800">
             
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="2*"/>
@@ -41,7 +69,7 @@
                 <ListBox Height="Auto" HorizontalAlignment="Stretch" Name="listBoxDownload" HorizontalContentAlignment="Stretch" MouseUp="listBoxResult_MouseUp" Background="{x:Null}" BorderBrush="{x:Null}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Hidden" VerticalContentAlignment="Stretch" Grid.Column="4" />
 
             </Grid>
-            <StackPanel Grid.Row="2" Name="stackPanel3" Background="#FF2C2C2C" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" />
+            <StackPanel Grid.Row="3" Name="stackPanel3" Background="#FF2C2C2C" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" />
         </Grid>
     </Grid>
 </Window>

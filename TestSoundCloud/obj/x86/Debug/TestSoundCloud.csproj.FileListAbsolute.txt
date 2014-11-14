@@ -130,3 +130,5 @@ C:\Users\supbiotech\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Debug\Test
 C:\Users\supbiotech\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Debug\UserControl\UserControlListItem.baml
 C:\Users\supbiotech\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Debug\UserControl\UserControlListItem.g.cs
 C:\Users\supbiotech\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Debug\TestSoundCloud.csprojResolveAssemblyReference.cache
+C:\Users\supbiotech\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Debug\UserControlPlayer.baml
+C:\Users\supbiotech\Documents\GitHub\SoundPlus\TestSoundCloud\obj\x86\Debug\UserControlPlayer.g.cs

@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\supbiotech\Documents\GitHub\SoundPlus\TestSoundCloud\App.xaml
-10823428054
+11-1133303834
 
-20-250176277
+21-1253555601
 13235847852
-MainWindow.xaml;UserControl\UserControlListItem.xaml;UserControl\UserControlPlaylist.xaml;UserControl\Preview\UserControlUserPreview.xaml;UserControl\Preview\UserControlPlayListPreview.xaml;UserControl\UserControlPlaylistDl.xaml;UserControl\UserControlUser.xaml;UserControl\UserControlTrack.xaml;UserControl\UserControlTrackDl.xaml;UserControl\Preview\UserControlTrackPreview.xaml;
+MainWindow.xaml;UserControlPlayer.xaml;UserControl\UserControlListItem.xaml;UserControl\UserControlPlaylist.xaml;UserControl\Preview\UserControlUserPreview.xaml;UserControl\Preview\UserControlPlayListPreview.xaml;UserControl\UserControlPlaylistDl.xaml;UserControl\UserControlUser.xaml;UserControl\UserControlTrack.xaml;UserControl\UserControlTrackDl.xaml;UserControl\Preview\UserControlTrackPreview.xaml;
 
-False
+True
 

@@ -68,5 +68,10 @@ namespace TestSoundCloud
 
             return tags2;
         }
+
+        public void Download(string path)
+        {
+
+        }
     }
 }
