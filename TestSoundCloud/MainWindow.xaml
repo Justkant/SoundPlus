@@ -29,8 +29,8 @@
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <ListBox Grid.Column="0" Height="Auto" HorizontalAlignment="Stretch" Name="listBoxResult" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Stretch" MouseUp="listBoxResult_MouseUp" Background="{x:Null}" BorderBrush="{x:Null}" ScrollViewer.VerticalScrollBarVisibility="Hidden" />
-            <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Stretch" Background="#00646464"></GridSplitter>
-            <GridSplitter Grid.Column="3" Width="5" HorizontalAlignment="Stretch" Background="#00646464"></GridSplitter>
+            <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Stretch" Background="#00646464"/>
+            <GridSplitter Grid.Column="3" Width="5" HorizontalAlignment="Stretch" Background="#00646464"/>
             <ListBox Height="Auto" HorizontalAlignment="Stretch" Name="listBoxDownload" HorizontalContentAlignment="Stretch" MouseUp="listBoxResult_MouseUp" Background="{x:Null}" BorderBrush="{x:Null}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Hidden" VerticalContentAlignment="Stretch" Grid.Column="4" />
 
         </Grid>

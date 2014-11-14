@@ -63,6 +63,9 @@
     <Compile Include="SoundCloudAPI\SoundCloudClient.cs" />
     <Compile Include="SoundCloudAPI\Track.cs" />
     <Compile Include="SoundCloudAPI\User.cs" />
+    <Compile Include="UserControl\UserControlListItem.xaml.cs">
+      <DependentUpon>UserControlListItem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\UserControlPlaylist.xaml.cs">
       <DependentUpon>UserControlPlaylist.xaml</DependentUpon>
     </Compile>
@@ -99,6 +102,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="UserControl\UserControlListItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControl\UserControlPlaylist.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

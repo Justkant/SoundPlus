@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="TestSoundCloud.UserControlListItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="42" d:DesignWidth="300" Margin="5">
+    <Grid>
+        
+        <StackPanel>
+            <Label Content="Label" Height="28" Name="labelTitle" Foreground="White" />
+            <Rectangle Height="1" Name="rectangle1" Stroke="{x:Null}" VerticalAlignment="Top" Fill="White" />
+
+            <ListBox Name="listBoxItems">
+                
+            </ListBox>
+            
+        </StackPanel>
+        
+    </Grid>
+</UserControl>
