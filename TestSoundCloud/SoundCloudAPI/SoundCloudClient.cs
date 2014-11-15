@@ -27,5 +27,15 @@ namespace TestSoundCloud
             userSearch = new Search<User>(client, ClientId, "users");
             playlistSearch = new Search<Playlist>(client, ClientId, "playlists");
         }
+
+        public static void DownloadTrack(Track track, string path)
+        {
+
+        }
+
+        public static void DownloadPlaylist(Playlist playlist, string path)
+        {
+
+        }
     }
 }
