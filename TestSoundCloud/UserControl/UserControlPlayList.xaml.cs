@@ -49,7 +49,14 @@ namespace TestSoundCloud
                 img.EndInit();
                 image.Source = img;
             }
-
+            else if (playlist.tracks[0] != null && playlist.tracks[0].artwork_url != null)
+            {
+                BitmapImage img = new BitmapImage();
+                img.BeginInit();
+                img.UriSource = new Uri(playlist.tracks[0].artwork_url, UriKind.Absolute);
+                img.EndInit();
+                image.Source = img;
+            }
         }
 
         private void buttonDownload_Click(object sender, RoutedEventArgs e)

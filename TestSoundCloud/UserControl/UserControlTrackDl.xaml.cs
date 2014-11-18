@@ -45,19 +45,7 @@ namespace TestSoundCloud
                 img.EndInit();
                 image.Source = img;
             }
-
-            WebClient client = new WebClient();
-            client.DownloadProgressChanged += (s, e) =>
-                {
-                    progressBar1.Value = e.ProgressPercentage;
-                };
-            client.DownloadFileCompleted += (s, e) =>
-                {
-                    // TODO : Button annuler
-                };
-            string final_path = "./" + track.title + ".mp3";
-            Uri uri = new Uri(track.stream_url + "?client_id=6db7be918aec176b9fc591ca1aade517");
-            client.DownloadFileAsync(uri, final_path);
+            SoundCloudClient.Downloader(track, "./", progressBar1);
         }
     }
 }
