@@ -69,15 +69,5 @@ namespace TestSoundCloud
 
             return tags2;
         }
-
-        public void Download(WebClient client, string path)
-        {
-            string fileName = path + title;
-
-            if (downloadable == true)
-                client.DownloadFile(download_url, fileName);
-            else
-                client.DownloadFile(stream_url, fileName);
-        }
     }
 }

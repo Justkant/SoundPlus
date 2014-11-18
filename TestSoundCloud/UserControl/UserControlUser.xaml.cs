@@ -45,6 +45,7 @@ namespace TestSoundCloud
                 img.EndInit();
                 image.Source = img;
             }
+
         }
     }
 }
