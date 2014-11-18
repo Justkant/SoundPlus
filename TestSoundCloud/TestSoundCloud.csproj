@@ -63,6 +63,9 @@
     <Compile Include="SoundCloudAPI\SoundCloudClient.cs" />
     <Compile Include="SoundCloudAPI\Track.cs" />
     <Compile Include="SoundCloudAPI\User.cs" />
+    <Compile Include="UserControlPages.xaml.cs">
+      <DependentUpon>UserControlPages.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\UserControlPlayer.xaml.cs">
       <DependentUpon>UserControlPlayer.xaml</DependentUpon>
     </Compile>
@@ -93,6 +96,9 @@
     <Compile Include="UserControl\Preview\UserControlTrackPreview.xaml.cs">
       <DependentUpon>UserControlTrackPreview.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WindowConfigue.xaml.cs">
+      <DependentUpon>WindowConfigue.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -105,6 +111,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="UserControlPages.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="UserControl\UserControlPlayer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -144,6 +154,10 @@
     <Page Include="UserControl\Preview\UserControlTrackPreview.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowConfigue.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
