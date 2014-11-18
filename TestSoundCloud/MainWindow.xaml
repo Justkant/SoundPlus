@@ -63,10 +63,10 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <StackPanel Name="stackPanel5">
-                    <my:UserControlPages x:Name="pagesControl" Margin="10,0" />
-                    <ListBox Grid.Column="0" HorizontalAlignment="Stretch" Name="listBoxResult" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Stretch" MouseUp="listBoxResult_MouseUp" Background="{x:Null}" BorderBrush="{x:Null}" ScrollViewer.VerticalScrollBarVisibility="Hidden" />
-                </StackPanel>
+                <DockPanel Name="stackPanel5" ScrollViewer.VerticalScrollBarVisibility="Disabled" Margin="-9,0,9,0">
+                    <my:UserControlPages x:Name="pagesControl" Margin="0" Height="Auto" VerticalAlignment="Top" DockPanel.Dock="Top" Background="{x:Null}" />
+                    <ListBox Grid.Column="0" Name="listBoxResult" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Stretch" MouseUp="listBoxResult_MouseUp" Background="{x:Null}" BorderBrush="{x:Null}" ScrollViewer.VerticalScrollBarVisibility="Hidden" VerticalContentAlignment="Stretch" Margin="0" DockPanel.Dock="Top" />
+                </DockPanel>
                 
                 <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Stretch" Background="#00646464"/>
                 <GridSplitter Grid.Column="3" Width="5" HorizontalAlignment="Stretch" Background="#00646464"/>

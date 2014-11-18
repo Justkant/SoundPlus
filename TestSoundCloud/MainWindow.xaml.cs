@@ -47,9 +47,7 @@ namespace TestSoundCloud
         {
             ClearColumn(2);
             trackPreview = new UserControlTrackPreview(track, this);
-            trackPreview.Width = Double.NaN;
-            trackPreview.Height = Double.NaN;
-            trackPreview.VerticalAlignment = System.Windows.VerticalAlignment.Top;
+            trackPreview.VerticalAlignment = System.Windows.VerticalAlignment.Stretch;
             Grid.SetColumn(trackPreview, 2);
             stackPanel2.Children.Add(trackPreview);
         }
@@ -58,9 +56,7 @@ namespace TestSoundCloud
         {
             ClearColumn(2);
             playListPreview = new UserControlPlaylistPreview(playList, this);
-            playListPreview.Width = Double.NaN;
-            playListPreview.Height = Double.NaN;
-            playListPreview.VerticalAlignment = System.Windows.VerticalAlignment.Top;
+            playListPreview.VerticalAlignment = System.Windows.VerticalAlignment.Stretch;
             Grid.SetColumn(playListPreview, 2);
             stackPanel2.Children.Add(playListPreview);
         }
@@ -69,9 +65,7 @@ namespace TestSoundCloud
         {
             ClearColumn(2);
             userPreview = new UserControlUserPreview(user, this);
-            userPreview.Width = Double.NaN;
-            trackPreview.Height = Double.NaN;
-            userPreview.VerticalAlignment = System.Windows.VerticalAlignment.Top;
+            userPreview.VerticalAlignment = System.Windows.VerticalAlignment.Stretch;
             Grid.SetColumn(userPreview, 2);
             stackPanel2.Children.Add(userPreview);
         }

@@ -3,9 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             mc:Ignorable="d" 
-             d:DesignHeight="379" d:DesignWidth="560">
-    <ScrollViewer VerticalScrollBarVisibility="Hidden">
+             mc:Ignorable="d" d:DesignWidth="560" ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0">
+    <ScrollViewer VerticalScrollBarVisibility="Hidden" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch">
     <Grid>
         <StackPanel Orientation="Vertical" Background="#FF1B1B1B">
             <Grid Height="Auto" Margin="10">
@@ -70,9 +69,9 @@
                     <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
-                <StackPanel Grid.Column="0">
+                <StackPanel Grid.Column="0" Orientation="Horizontal">
                     <Label Content="Posted on" Height="28" HorizontalAlignment="Left" Name="label1" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" />
-                    <Label Content="Nov 13, 2014" Height="28" Margin="75.36,187.05,0,0" Name="labelStartedOn" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="White" />
+                    <Label Content="Nov 13, 2014" Height="28" Margin="15,0,0,0" Name="labelStartedOn" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="White" Padding="5" />
                 </StackPanel>
 
                 <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal">

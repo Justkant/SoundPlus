@@ -8,9 +8,9 @@
     <Grid>
 
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button AllowDrop="False" BorderBrush="{x:Null}" Content="First" Height="Auto" HorizontalAlignment="Center" Name="buttonFirst" VerticalAlignment="Stretch" Width="Auto" Background="#FF3A3A3A" Foreground="White" Margin="2" Padding="8,0" Click="buttonFirst_Click" />
-            <Button AllowDrop="False" BorderBrush="{x:Null}" Content="Prev" Height="Auto" HorizontalAlignment="Center" Name="buttonPrev" VerticalAlignment="Stretch" Width="Auto" Background="#FF3A3A3A" Foreground="White" Margin="2" Padding="8,0" Click="buttonPrev_Click" />
-            <Button AllowDrop="False" BorderBrush="{x:Null}" Content="Next" Height="Auto" HorizontalAlignment="Center" Name="buttonNext" VerticalAlignment="Stretch" Width="Auto" Background="#FF3A3A3A" Foreground="White" Margin="2" Padding="8,0" Click="buttonLast_Click" />
+            <Button AllowDrop="False" BorderBrush="{x:Null}" Content="First" Height="Auto" HorizontalAlignment="Center" Name="buttonFirst" VerticalAlignment="Stretch" Width="Auto" Background="#FF1B1B1B" Foreground="White" Margin="2" Padding="8,0" Click="buttonFirst_Click" />
+            <Button AllowDrop="False" BorderBrush="{x:Null}" Content="Prev" Height="Auto" HorizontalAlignment="Center" Name="buttonPrev" VerticalAlignment="Stretch" Width="Auto" Background="#FF1B1B1B" Foreground="White" Margin="2" Padding="8,0" Click="buttonPrev_Click" />
+            <Button AllowDrop="False" BorderBrush="{x:Null}" Content="Next" Height="Auto" HorizontalAlignment="Center" Name="buttonNext" VerticalAlignment="Stretch" Width="Auto" Background="#FF1B1B1B" Foreground="White" Margin="2" Padding="8,0" Click="buttonLast_Click" />
         </StackPanel>
     </Grid>
 </UserControl>
