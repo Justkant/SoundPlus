@@ -29,6 +29,7 @@ namespace TestSoundCloud
             InitializeComponent();
 
             pagesControl.parent = this;
+            pagesControl.Visibility = System.Windows.Visibility.Hidden;
 
             client = new SoundCloudClient();
             textBoxSearch.Text = "savant";
@@ -73,6 +74,7 @@ namespace TestSoundCloud
         public void SearchEngine(int i)// 0 for search, 1 next page, -1 prev page
         {
             listBoxResult.Items.Clear();
+            pagesControl.Reset();
 
             if (radioButtonTracks.IsChecked.Value)
             {
@@ -116,6 +118,8 @@ namespace TestSoundCloud
                 foreach (User user in users)
                     listBoxResult.Items.Add(new UserControlUser(user, listBoxDownload));
             }
+
+            pagesControl.Visibility = System.Windows.Visibility.Visible;
         }
 
         private void textBoxSearch_KeyDown(object sender, KeyEventArgs e)
@@ -152,6 +156,11 @@ namespace TestSoundCloud
         private void MenuItemConfigure_Click(object sender, RoutedEventArgs e)
         {
             new WindowConfigue().Show();
+        }
+
+        private void radioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            SearchEngine(0);
         }
     }
 }
