@@ -33,6 +33,7 @@ namespace TestSoundCloud
 
             labelTitle.Content = track.title;
             labelAuthor.Content = track.user.username;
+            labelDuration.Content = track.duration_string;
 
             if (track.user.avatar_url != null)
             {

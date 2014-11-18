@@ -40,6 +40,8 @@ namespace TestSoundCloud
 
             this.labelTitle.Content = playlist.title;
             this.labelUser.Content = playlist.user.username;
+            labelDuration.Content = playlist.duration_string;
+            this.labelTracks.Content = playlist.tracks.Count.ToString();
         }
     }
 }

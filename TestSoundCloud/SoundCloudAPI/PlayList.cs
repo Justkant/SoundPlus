@@ -37,6 +37,18 @@ namespace TestSoundCloud
         public string playlist_type { get; set; }
         public List<Track> tracks { get; set; }
 
+        public string duration_string
+        {
+            get
+            {
+                TimeSpan t = TimeSpan.FromMilliseconds((double)duration);
+                if (t.Hours > 0)
+                    return String.Format("{0}:{1:D2}:{2:D2}", t.Hours, t.Minutes, t.Seconds);
+                else
+                    return String.Format("{0}:{1:D2}", t.Minutes, t.Seconds);
+            }
+        }
+
         public List<String> GetTagList()
         {
             String[] tags = tag_list.Split(' ');
