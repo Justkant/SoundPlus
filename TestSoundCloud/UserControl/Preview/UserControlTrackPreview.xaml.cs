@@ -86,7 +86,7 @@ namespace TestSoundCloud
 
             parent.radioButtonTracks.IsChecked = true;
             
-            parent.SearchEngine();
+            parent.SearchEngine(0);
         }
 
         private void buttonUser_Click(object sender, RoutedEventArgs e)
@@ -96,7 +96,7 @@ namespace TestSoundCloud
 
             parent.radioButtonUsers.IsChecked = true;
 
-            parent.SearchEngine();
+            parent.SearchEngine(0);
         }
 
         private void buttonDownload_Click(object sender, RoutedEventArgs e)

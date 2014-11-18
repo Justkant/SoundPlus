@@ -27,7 +27,7 @@
                     <MenuItem Header="Three..." HorizontalAlignment="Left" Width="140"/>
                 </MenuItem>
                 <MenuItem Header="Edit">
-                    <MenuItem Header="One..." HorizontalAlignment="Left" Width="140"/>
+                    <MenuItem Header="Configure" HorizontalAlignment="Left" Width="140" Click="MenuItemConfigure_Click" />
                     <MenuItem Header="Two..." HorizontalAlignment="Left" Width="140"/>
                     <Separator HorizontalAlignment="Left" Width="140"/>
                     <MenuItem Header="Three..." HorizontalAlignment="Left" Width="140"/>
@@ -53,7 +53,7 @@
                 <RadioButton Content="Users" Height="16" Name="radioButtonUsers" Padding="0" Margin="5,0" BorderBrush="{x:Null}" Background="#FF343434" Foreground="White" />
             </StackPanel>
             
-            <Grid Grid.Row="2" Name="stackPanel2" Background="#FF2C2C2C" ScrollViewer.VerticalScrollBarVisibility="Hidden" MaxHeight="800">
+            <Grid Grid.Row="2" Name="stackPanel2" Background="#FF2C2C2C" ScrollViewer.VerticalScrollBarVisibility="Hidden">
             
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="2*"/>
@@ -62,8 +62,12 @@
                     <ColumnDefinition Width="3"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
+
+                <StackPanel Name="stackPanel5">
+                    <my:UserControlPages x:Name="pagesControl" Margin="10,0" />
+                    <ListBox Grid.Column="0" HorizontalAlignment="Stretch" Name="listBoxResult" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Stretch" MouseUp="listBoxResult_MouseUp" Background="{x:Null}" BorderBrush="{x:Null}" ScrollViewer.VerticalScrollBarVisibility="Hidden" />
+                </StackPanel>
                 
-                <ListBox Grid.Column="0" Height="Auto" HorizontalAlignment="Stretch" Name="listBoxResult" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Stretch" MouseUp="listBoxResult_MouseUp" Background="{x:Null}" BorderBrush="{x:Null}" ScrollViewer.VerticalScrollBarVisibility="Hidden" />
                 <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Stretch" Background="#00646464"/>
                 <GridSplitter Grid.Column="3" Width="5" HorizontalAlignment="Stretch" Background="#00646464"/>
                 <ListBox Height="Auto" HorizontalAlignment="Stretch" Name="listBoxDownload" HorizontalContentAlignment="Stretch" MouseUp="listBoxResult_MouseUp" Background="{x:Null}" BorderBrush="{x:Null}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Hidden" VerticalContentAlignment="Stretch" Grid.Column="4" />

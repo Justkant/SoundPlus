@@ -28,6 +28,8 @@ namespace TestSoundCloud
         {
             InitializeComponent();
 
+            pagesControl.parent = this;
+
             client = new SoundCloudClient();
             textBoxSearch.Text = "savant";
             radioButtonTracks.IsChecked = true;
@@ -74,22 +76,34 @@ namespace TestSoundCloud
             stackPanel2.Children.Add(userPreview);
         }
 
-        public void SearchEngine()
+        public void SearchEngine(int i)// 0 for search, 1 next page, -1 prev page
         {
             listBoxResult.Items.Clear();
 
             if (radioButtonTracks.IsChecked.Value)
             {
                 List<Track> tracks;
-                tracks = client.trackSearch.SearchQuery(textBoxSearch.Text);
+
+                if (i == 0)
+                    tracks = client.trackSearch.SearchQuery(textBoxSearch.Text);
+                else if (i == 1)
+                    tracks = client.trackSearch.NextPage();
+                else
+                    tracks = client.trackSearch.PrevPage();
 
                 foreach (Track track in tracks)
                     listBoxResult.Items.Add(new UserControlTrack(track, listBoxDownload));
             }
             else if (radioButtonPlaylists.IsChecked.Value)
             {
-                List<Playlist> playlists;
-                playlists = client.playlistSearch.SearchQuery(textBoxSearch.Text);
+                List<Playlist> playlists; 
+                
+                if (i == 0)
+                    playlists = client.playlistSearch.SearchQuery(textBoxSearch.Text);
+                else if (i == 1)
+                    playlists = client.playlistSearch.NextPage();
+                else
+                    playlists = client.playlistSearch.PrevPage();
 
                 foreach (Playlist playlist in playlists)
                     listBoxResult.Items.Add(new UserControlPlaylist(playlist, listBoxDownload));
@@ -97,7 +111,13 @@ namespace TestSoundCloud
             else
             {
                 List<User> users;
-                users = client.userSearch.SearchQuery(textBoxSearch.Text);
+
+                if (i == 0)
+                    users = client.userSearch.SearchQuery(textBoxSearch.Text);
+                else if (i == 1)
+                    users = client.userSearch.NextPage();
+                else
+                    users = client.userSearch.PrevPage();
 
                 foreach (User user in users)
                     listBoxResult.Items.Add(new UserControlUser(user, listBoxDownload));
@@ -107,7 +127,7 @@ namespace TestSoundCloud
         private void textBoxSearch_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Enter)
-                SearchEngine();
+                SearchEngine(0);
         }
 
         private void listBoxResult_MouseUp(object sender, MouseButtonEventArgs e)
@@ -133,6 +153,11 @@ namespace TestSoundCloud
 
                 updatePreview(((UserControlTrackDl)listBoxDownload.SelectedItem).Track);
             }
+        }
+
+        private void MenuItemConfigure_Click(object sender, RoutedEventArgs e)
+        {
+            new WindowConfigue().Show();
         }
     }
 }
