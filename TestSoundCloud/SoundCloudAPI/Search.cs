@@ -19,7 +19,6 @@ namespace TestSoundCloud
         private int curr_offset;
         private int curr_limit;
 
-
         public Search(WebClient client, string ClientId, string api)
         {
             this.client = client;

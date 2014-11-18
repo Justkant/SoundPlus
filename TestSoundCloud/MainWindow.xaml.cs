@@ -31,7 +31,7 @@ namespace TestSoundCloud
             client = new SoundCloudClient();
             textBoxSearch.Text = "savant";
             radioButtonTracks.IsChecked = true;
-            SearchEngine();
+            //SearchEngine();
         }
 
         private void ClearColumn(int column)

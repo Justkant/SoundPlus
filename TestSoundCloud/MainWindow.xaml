@@ -19,11 +19,11 @@
                 <RowDefinition Height="48"/>
             </Grid.RowDefinitions>
 
-            <Menu Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Top" Width="Auto">
-                <MenuItem Header="File">
-                    <MenuItem Header="One..." HorizontalAlignment="Left" Width="140"/>
-                    <MenuItem Header="Two..." HorizontalAlignment="Left" Width="140"/>
-                    <Separator HorizontalAlignment="Left" Width="140"/>
+            <Menu Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Top" Width="Auto" Background="#FF2C2C2C" Foreground="White">
+                <MenuItem Header="File" Background="#FF2C2C2C" BorderBrush="{x:Null}" Foreground="White" StaysOpenOnClick="True">
+                    <MenuItem Header="One..." HorizontalAlignment="Left" Width="140" Background="#FF151515" BorderBrush="{x:Null}"/>
+                    <MenuItem Header="Two..." HorizontalAlignment="Left" Width="140" Background="#FF151515" BorderBrush="{x:Null}"/>
+                    <Separator HorizontalAlignment="Left" Width="140" Foreground="{x:Null}" Background="#FF5F5F5F"/>
                     <MenuItem Header="Three..." HorizontalAlignment="Left" Width="140"/>
                 </MenuItem>
                 <MenuItem Header="Edit">
