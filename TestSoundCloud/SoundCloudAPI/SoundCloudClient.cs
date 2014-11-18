@@ -42,7 +42,7 @@ namespace TestSoundCloud
 
         public static void Downloader(Track track, string path, ProgressBar progressBar)
         {
-            if (track.stream_url == null)
+            if (track.stream_url == null && track.download_url == null)
             {
                 return;
             }
@@ -57,7 +57,15 @@ namespace TestSoundCloud
                     // TODO : Button annuler
                 };
             string final_path = path + track.title + ".mp3";
-            Uri uri = new Uri(track.stream_url + "?client_id=6db7be918aec176b9fc591ca1aade517");
+            Uri uri = null;
+            if (track.downloadable == true && track.download_url != null)
+            {
+                uri = new Uri(track.download_url + "?client_id=6db7be918aec176b9fc591ca1aade517");
+            }
+            else if (track.streamable == true && track.stream_url != null)
+            {
+                uri = new Uri(track.stream_url + "?client_id=6db7be918aec176b9fc591ca1aade517");
+            }
             client.DownloadFileAsync(uri, final_path);
         }
     }
