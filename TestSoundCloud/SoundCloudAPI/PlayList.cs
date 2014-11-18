@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 
 namespace TestSoundCloud
@@ -53,9 +54,12 @@ namespace TestSoundCloud
             return tags2;
         }
 
-        public void Download(string path)
+        public void Download(WebClient client, string path)
         {
+            string playlist_path = path + title + "/";
 
+            foreach (Track track in tracks)
+                track.Download(client, playlist_path);
         }
     }
 }

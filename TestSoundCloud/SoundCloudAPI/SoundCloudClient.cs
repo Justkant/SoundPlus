@@ -14,7 +14,7 @@ namespace TestSoundCloud
         static private string ClientId = "6db7be918aec176b9fc591ca1aade517";
         static private string ClientSecret = "b8230bb9c62077357b05bb54440fae52";
 
-        private WebClient client;
+        public WebClient client { get; private set; }
 
         public Search<Track> trackSearch;
         public Search<User> userSearch;
