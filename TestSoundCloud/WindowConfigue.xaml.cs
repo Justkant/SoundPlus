@@ -18,14 +18,40 @@ namespace TestSoundCloud
     /// </summary>
     public partial class WindowConfigue : Window
     {
+        Preferences pref;
+
         public WindowConfigue()
         {
             InitializeComponent();
         }
 
+        public void Init(Preferences pref)
+        {
+            this.pref = pref;
+
+            textBoxPath.Text = pref.SavePath;
+        }
+
         private void buttonBrowse_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void Save()
+        {
+            pref.SavePath = textBoxPath.Text;
+
+            System.Xml.Serialization.XmlSerializer writer =
+            new System.Xml.Serialization.XmlSerializer(typeof(Preferences));
+
+            System.IO.StreamWriter file = new System.IO.StreamWriter("config.xml");
+            writer.Serialize(file, pref);
+            file.Close();
+        }
+
+        private void MenuItemSave_Click(object sender, RoutedEventArgs e)
+        {
+            Save();
         }
     }
 }

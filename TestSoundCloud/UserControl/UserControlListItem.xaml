@@ -11,7 +11,7 @@
             <Label Content="Label" Height="28" Name="labelTitle" Foreground="White" />
             <Rectangle Height="1" Name="rectangle1" Stroke="{x:Null}" VerticalAlignment="Top" Fill="White" />
 
-            <ListBox Name="listBoxItems">
+            <ListBox Name="listBoxItems" HorizontalContentAlignment="Stretch">
                 
             </ListBox>
             

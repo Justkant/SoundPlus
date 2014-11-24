@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace TestSoundCloud
 {
@@ -24,9 +25,13 @@ namespace TestSoundCloud
         UserControlPlaylistPreview playListPreview;
         UserControlUserPreview userPreview;
 
+        public static Preferences Preferences;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            LoadPreferences();
 
             pagesControl.parent = this;
             pagesControl.Visibility = System.Windows.Visibility.Hidden;
@@ -35,6 +40,22 @@ namespace TestSoundCloud
             textBoxSearch.Text = "savant";
             radioButtonTracks.IsChecked = true;
             //SearchEngine();
+        }
+
+        private void LoadPreferences()
+        {
+            System.Xml.Serialization.XmlSerializer serializer = new System.Xml.Serialization.XmlSerializer(typeof(Preferences));
+
+            Preferences result;
+            try
+            {
+                using (FileStream fileStream = new FileStream("config.xml", FileMode.Open))
+                    Preferences = (Preferences)serializer.Deserialize(fileStream);
+            }
+            catch
+            {
+                Preferences = new Preferences();
+            }
         }
 
         private void ClearColumn(int column)
@@ -155,7 +176,9 @@ namespace TestSoundCloud
 
         private void MenuItemConfigure_Click(object sender, RoutedEventArgs e)
         {
-            new WindowConfigue().Show();
+            WindowConfigue w = new WindowConfigue();
+            w.Init(Preferences);
+            w.Show();
         }
 
         private void radioButton_Checked(object sender, RoutedEventArgs e)

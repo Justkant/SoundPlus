@@ -27,19 +27,35 @@ namespace TestSoundCloud
             InitializeComponent();
         }
 
+        public void Reset()
+        {
+            labelPage.Content = "0";
+        }
+
+        private void changePage(int n)
+        {
+            int current = Convert.ToInt32(labelPage.Content);
+
+            if (current == 1 && n == -1)
+                return;
+
+            parent.SearchEngine(n);
+            labelPage.Content = (current + n).ToString();
+        }
+
         private void buttonFirst_Click(object sender, RoutedEventArgs e)
         {
-            parent.SearchEngine(0);
+            changePage(0);
         }
 
         private void buttonPrev_Click(object sender, RoutedEventArgs e)
         {
-            parent.SearchEngine(-1);
+            changePage(-1);
         }
 
         private void buttonLast_Click(object sender, RoutedEventArgs e)
         {
-            parent.SearchEngine(1);
+            changePage(1);
         }
     }
 }

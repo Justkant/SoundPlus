@@ -44,9 +44,13 @@ namespace TestSoundCloud
             labelSounds.Content = user.track_count;
             textBlockDescription.Text = user.description;
 
-            UserControlListItem listTracks = new UserControlListItem("Tracks", parent.listBoxDownload);
-            UserControlListItem listPlaylists = new UserControlListItem("Playlists", parent.listBoxDownload);
-            UserControlListItem listFollowers = new UserControlListItem("Followers", parent.listBoxDownload);
+            UserControlListItem listTracks = new UserControlListItem();
+            UserControlListItem listPlaylists = new UserControlListItem();
+            UserControlListItem listFollowers = new UserControlListItem();
+
+            listTracks.Init("Tracks", parent.listBoxDownload);
+            listPlaylists.Init("Tracks", parent.listBoxDownload);
+            listFollowers.Init("Tracks", parent.listBoxDownload);
 
             //appeler la fct fill pour chaque list
 

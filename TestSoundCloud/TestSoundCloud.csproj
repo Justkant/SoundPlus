@@ -58,6 +58,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Preferences.cs" />
     <Compile Include="SoundCloudAPI\Playlist.cs" />
     <Compile Include="SoundCloudAPI\Search.cs" />
     <Compile Include="SoundCloudAPI\SoundCloudClient.cs" />

@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="379" d:DesignWidth="560">
+             d:DesignHeight="379" d:DesignWidth="560" xmlns:my="clr-namespace:TestSoundCloud">
     <ScrollViewer VerticalScrollBarVisibility="Hidden">
         <Grid>
             <StackPanel Orientation="Vertical" Background="#FF1B1B1B" Name="content">
@@ -57,7 +57,7 @@
                 </StackPanel>
 
                 <Rectangle Height="1" Name="rectangle2" Stroke="{x:Null}" VerticalAlignment="Top" Fill="White" />
-
+                <my:UserControlListItem x:Name="listTracks" />
             </StackPanel>
         </Grid>
     </ScrollViewer>

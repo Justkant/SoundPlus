@@ -21,12 +21,15 @@ namespace TestSoundCloud
     {
         ListBox listBoxDownload;
 
-        public UserControlListItem(String title, ListBox listBoxDownload)
+        public UserControlListItem()
         {
             InitializeComponent();
 
-            this.listBoxDownload = listBoxDownload;
+        }
 
+        public void Init(String title, ListBox listBoxDownload)
+        {
+            this.listBoxDownload = listBoxDownload;
             this.labelTitle.Content = title;
         }
 
