@@ -8,7 +8,14 @@
     <Grid>
         
         <StackPanel>
-            <Label Content="Label" Height="28" Name="labelTitle" Foreground="White" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="80"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Content="Label" Height="28" Name="labelTitle" Foreground="White" />
+                <Button Grid.Column="1" DockPanel.Dock="Left" Content="Download" Height="23" Name="buttonDl" Width="75" Click="buttonDl_Click" />
+            </Grid>
             <Rectangle Height="1" Name="rectangle1" Stroke="{x:Null}" VerticalAlignment="Top" Fill="White" />
 
             <ListBox Name="listBoxItems" HorizontalContentAlignment="Stretch">

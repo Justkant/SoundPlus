@@ -50,10 +50,8 @@ namespace TestSoundCloud
         private void buttonDownload_Click(object sender, RoutedEventArgs e)
         {
             ((Button)sender).IsEnabled = false;
-            Grid grid = (Grid)((Button)sender).Parent;
-            Track track = ((UserControlTrack)grid.Parent).Track;
 
-            listBoxDownload.Items.Add(new UserControlTrackDl(track));
+            listBoxDownload.Items.Add(new UserControlTrackDl(Track));
         }
 
     }

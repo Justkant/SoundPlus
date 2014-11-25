@@ -10,8 +10,10 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
-        <Label Content="0" Foreground="#FFAAA8A8" Height="28" HorizontalAlignment="Left" Name="labelPage" VerticalAlignment="Top" Margin="15,0,0,0" />
-
+        <StackPanel Orientation="Horizontal">
+            <Label Content="    page" Foreground="#FFAAA8A8" Height="28" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label Content="0" Foreground="#FFAAA8A8" Height="28" HorizontalAlignment="Left" Name="labelPage" VerticalAlignment="Top"/>
+        </StackPanel>
         <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
             <Button AllowDrop="False" BorderBrush="{x:Null}" Content="First" Height="Auto" HorizontalAlignment="Center" Name="buttonFirst" VerticalAlignment="Stretch" Width="Auto" Background="#FF1B1B1B" Foreground="White" Margin="2" Padding="8,0" Click="buttonFirst_Click" />
             <Button AllowDrop="False" BorderBrush="{x:Null}" Content="Prev" Height="Auto" HorizontalAlignment="Center" Name="buttonPrev" VerticalAlignment="Stretch" Width="Auto" Background="#FF1B1B1B" Foreground="White" Margin="2" Padding="8,0" Click="buttonPrev_Click" />

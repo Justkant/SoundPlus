@@ -11,7 +11,7 @@
         <Button AllowDrop="False" BorderBrush="{x:Null}" Content="II" Height="19" HorizontalAlignment="Right" Name="buttonPause" VerticalAlignment="Bottom" Width="20" Margin="0,0,36,2" Background="#FF3A3A3A" Foreground="White" />
         <Button AllowDrop="False" BorderBrush="{x:Null}" Content="X" Height="19" HorizontalAlignment="Right" Margin="0,0,18,2" Name="buttonCancel" VerticalAlignment="Bottom" Width="20" Background="#FF3A3A3A" Foreground="White" />
         <Button AllowDrop="False" BorderBrush="{x:Null}" Content="D" Height="19" HorizontalAlignment="Right" Margin="0,0,0,2" Name="buttonStart" VerticalAlignment="Bottom" Width="20" Background="#FF3A3A3A" Foreground="White" />
-        <ProgressBar Height="5" Name="progressBar1" VerticalAlignment="Bottom" BorderBrush="{x:Null}" Margin="0,0,0,-1" Background="#FF5D5D5D" Foreground="#FFF65100" />
-        <Image HorizontalAlignment="Left" Name="image" Stretch="Fill" Width="47" Height="47" VerticalAlignment="Top" />
+        <ProgressBar Height="1" Name="progressBar1" VerticalAlignment="Bottom" BorderBrush="{x:Null}" Margin="0,0,0,-1" Background="#FF5D5D5D" Foreground="#FFF65100" />
+        <Image HorizontalAlignment="Left" Name="image" Stretch="Fill" Width="46" Height="46" VerticalAlignment="Top" />
     </Grid>
 </UserControl>

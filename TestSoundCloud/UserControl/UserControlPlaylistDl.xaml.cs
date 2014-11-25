@@ -51,7 +51,7 @@ namespace TestSoundCloud
                 img.EndInit();
                 image.Source = img;
             }
-            SoundCloudClient.Downloader(playlist, "./", progressBar1);
+            SoundCloudClient.Downloader(playlist, MainWindow.Preferences.SavePath, progressBar1);
         }
     }
 }

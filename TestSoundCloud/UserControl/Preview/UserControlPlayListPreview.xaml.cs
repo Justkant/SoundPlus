@@ -44,7 +44,7 @@ namespace TestSoundCloud
             this.labelTracks.Content = playlist.tracks.Count.ToString();
 
             listTracks.Init("Tracks", parent.listBoxDownload);
-            listTracks.Fill(playlist.tracks);
+            listTracks.Fill(playlist);
         }
     }
 }

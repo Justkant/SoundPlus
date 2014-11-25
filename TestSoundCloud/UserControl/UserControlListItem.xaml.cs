@@ -21,10 +21,11 @@ namespace TestSoundCloud
     {
         ListBox listBoxDownload;
 
+        object item;
+
         public UserControlListItem()
         {
             InitializeComponent();
-
         }
 
         public void Init(String title, ListBox listBoxDownload)
@@ -33,8 +34,10 @@ namespace TestSoundCloud
             this.labelTitle.Content = title;
         }
 
-        public void Fill(List<Track> tracks)
+        public void Fill(Playlist playlist)
         {
+            item = playlist;
+            List<Track> tracks = playlist.tracks;
             this.labelTitle.Content = tracks.Count + " " + this.labelTitle.Content;
             foreach (Track track in tracks)
                 listBoxItems.Items.Add(new UserControlTrack(track, listBoxDownload));
@@ -52,6 +55,11 @@ namespace TestSoundCloud
             this.labelTitle.Content = followers.Count + " " + this.labelTitle.Content;
             foreach (User user in followers)
                 listBoxItems.Items.Add(new UserControlUser(user, listBoxDownload));
+        }
+
+        private void buttonDl_Click(object sender, RoutedEventArgs e)
+        {
+             listBoxDownload.Items.Add(new UserControlPlaylistDl((Playlist)item));
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="TestSoundCloud.UserControlUserPreview"
+﻿<UserControl xmlns:my="clr-namespace:TestSoundCloud"  x:Class="TestSoundCloud.UserControlUserPreview"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -67,9 +67,11 @@
                     <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
+                <my:UserControlListItem Grid.Column="0" x:Name="listTracks" />
                 <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Stretch" Background="#00646464"/>
                 <StackPanel Name="stackPanelContent" Grid.Column="2">
-                    
+                    <my:UserControlListItem x:Name="listPlaylists" />
+                    <my:UserControlListItem x:Name="listFollowers" />
                 </StackPanel>
             </Grid>
             

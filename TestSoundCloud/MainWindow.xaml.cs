@@ -46,7 +46,6 @@ namespace TestSoundCloud
         {
             System.Xml.Serialization.XmlSerializer serializer = new System.Xml.Serialization.XmlSerializer(typeof(Preferences));
 
-            Preferences result;
             try
             {
                 using (FileStream fileStream = new FileStream("config.xml", FileMode.Open))
