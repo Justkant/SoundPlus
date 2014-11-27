@@ -67,6 +67,12 @@
     <Compile Include="UserControlPages.xaml.cs">
       <DependentUpon>UserControlPages.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControlPlaylistLocal.xaml.cs">
+      <DependentUpon>UserControlPlaylistLocal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlTrackLocal.xaml.cs">
+      <DependentUpon>UserControlTrackLocal.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\UserControlPlayer.xaml.cs">
       <DependentUpon>UserControlPlayer.xaml</DependentUpon>
     </Compile>
@@ -115,6 +121,14 @@
     <Page Include="UserControlPages.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControlPlaylistLocal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlTrackLocal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControl\UserControlPlayer.xaml">
       <SubType>Designer</SubType>

@@ -36,10 +36,36 @@ namespace TestSoundCloud
             pagesControl.parent = this;
             pagesControl.Visibility = System.Windows.Visibility.Hidden;
 
+            WalkDirectoryTree(Directory.GetParent(Preferences.SavePath));
+
             client = new SoundCloudClient();
             textBoxSearch.Text = "savant";
             radioButtonTracks.IsChecked = true;
-            //SearchEngine();
+        }
+        
+        private void WalkDirectoryTree(System.IO.DirectoryInfo root)
+        {
+            System.IO.FileInfo[] files = null;
+            System.IO.DirectoryInfo[] subDirs = null;
+
+            try
+            {
+                files = root.GetFiles("*.*");
+            }
+            catch (UnauthorizedAccessException e) { Console.WriteLine(e.Message ); }
+            catch (System.IO.DirectoryNotFoundException e) { Console.WriteLine(e.Message); }
+            
+            if (files != null)
+            {
+                foreach (System.IO.FileInfo fi in files)
+                {
+                    listBoxLocal.Items.Add(new UserControlTrackLocal(fi));
+                    Console.WriteLine(fi.FullName);
+                }
+
+                foreach (System.IO.DirectoryInfo dirInfo in root.GetDirectories())
+                    WalkDirectoryTree(dirInfo);
+            }
         }
 
         private void LoadPreferences()
