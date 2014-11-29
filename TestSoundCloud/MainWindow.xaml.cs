@@ -59,7 +59,7 @@ namespace TestSoundCloud
             {
                 foreach (System.IO.FileInfo fi in files)
                 {
-                    listBoxLocal.Items.Add(new UserControlTrackLocal(fi));
+                    listBoxLocal.Items.Add(new UserControlTrackLocal(fi, listBoxLocal));
                     Console.WriteLine(fi.FullName);
                 }
 
@@ -195,7 +195,14 @@ namespace TestSoundCloud
                 if (listBoxDownload.SelectedItem == null)
                     return;
 
-                updatePreview(((UserControlTrackDl)listBoxDownload.SelectedItem).Track);
+                try
+                {
+                    updatePreview(((UserControlTrackDl)listBoxDownload.SelectedItem).Track);
+                }
+                catch
+                {
+                    updatePreview(((UserControlPlaylistDl)listBoxDownload.SelectedItem).Playlist);
+                }
             }
         }
 

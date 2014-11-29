@@ -36,7 +36,29 @@ namespace TestSoundCloud
             Directory.CreateDirectory(final_path);
             foreach (Track track in playlist.tracks)
             {
-                Downloader(track, final_path, progressBar);
+                if (track.stream_url == null && track.download_url == null) return;
+
+                WebClient client = new WebClient();
+                client.DownloadProgressChanged += (s, e) =>
+                {
+                    // TODO : Update fluid progressbar
+                };
+                client.DownloadFileCompleted += (s, e) =>
+                {
+                    progressBar.Value += 100 / playlist.tracks.Count;
+                };
+
+                string final_path2 = path + track.title + ".mp3";
+                Uri uri = null;
+                if (track.downloadable == true && track.download_url != null)
+                {
+                    uri = new Uri(track.download_url + "?client_id=6db7be918aec176b9fc591ca1aade517");
+                }
+                else if (track.streamable == true && track.stream_url != null)
+                {
+                    uri = new Uri(track.stream_url + "?client_id=6db7be918aec176b9fc591ca1aade517");
+                }
+                client.DownloadFileAsync(uri, final_path2);
             }
         }
 
@@ -44,8 +66,10 @@ namespace TestSoundCloud
         {
             if (track.stream_url == null && track.download_url == null)
             {
+                Console.WriteLine("Track : Can't dl " + track.title);
                 return;
             }
+
             WebClient client = new WebClient();
             client.DownloadProgressChanged += (s, e) =>
                 {

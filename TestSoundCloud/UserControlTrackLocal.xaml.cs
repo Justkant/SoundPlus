@@ -21,15 +21,22 @@ namespace TestSoundCloud
     public partial class UserControlTrackLocal : UserControl
     {
         public FileInfo Track;
+        ListBox listLocal;
 
-        public UserControlTrackLocal(FileInfo track)
+        public UserControlTrackLocal(FileInfo track, ListBox listLocal)
         {
             InitializeComponent();
+            this.listLocal = listLocal;
 
             Track = track;
 
             labelTitle.Content = track.Name;
+        }
 
+        private void buttonDelete_Click(object sender, RoutedEventArgs e)
+        {
+            Track.Delete();
+            listLocal.Items.Remove(this);
         }
     }
 }
