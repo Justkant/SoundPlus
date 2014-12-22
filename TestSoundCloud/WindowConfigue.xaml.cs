@@ -41,8 +41,7 @@ namespace TestSoundCloud
         {
             pref.SavePath = textBoxPath.Text;
 
-            System.Xml.Serialization.XmlSerializer writer =
-            new System.Xml.Serialization.XmlSerializer(typeof(Preferences));
+            System.Xml.Serialization.XmlSerializer writer = new System.Xml.Serialization.XmlSerializer(typeof(Preferences));
 
             System.IO.StreamWriter file = new System.IO.StreamWriter("config.xml");
             writer.Serialize(file, pref);

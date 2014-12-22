@@ -36,7 +36,8 @@ namespace TestSoundCloud
             pagesControl.parent = this;
             pagesControl.Visibility = System.Windows.Visibility.Hidden;
 
-            WalkDirectoryTree(Directory.GetParent(Preferences.SavePath));
+            if (Preferences.SavePath != null)
+                WalkDirectoryTree(Directory.GetParent(Preferences.SavePath));
 
             client = new SoundCloudClient();
             textBoxSearch.Text = "savant";
